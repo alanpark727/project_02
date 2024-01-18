@@ -6,22 +6,31 @@
     width: 1200px;
     height: auto;
     margin: 0 auto;
+    background-color: #ddd;
 }
+
 
 #character h1 {
     width: 100%;
-    height: 120px;
+    height: 90px;
     background-color: gold;
 }
 
-#character #imagebox {
+#character .imgpart {
+    display: flex;
+    flex-flow: column wrap;
     width: 50%;
+    height: 900px;
+}
+
+#character .imgpart #imagebox {
+    width: 100%;
     height: 600px;
     background-color: pink;
 }
 
-#character #thumbnail {
-    width: 50%;
+#character .imgpart #thumbnail {
+    width: 100%;
     height: 300px;
     background-color: #555;
 }
@@ -36,4 +45,32 @@
     width: 100%;
     height: 300px;
     background-color: lightblue;
+}
+
+#story {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    height: 1320px;
+    margin: 0 auto;
+    background-color: bisque;
+    align-content: space-around;
+}
+
+#story h1 {
+    width: 100%;
+    height: 90px;
+    background-color: gold;
+}
+
+#story .story_img {
+    width: 50%;
+    height: 570px;
+    background-color: lightsalmon;
+}
+
+#story .story_text {
+    width: 50%;
+    height: 570px;
+    background-color: yellowgreen;
 }
