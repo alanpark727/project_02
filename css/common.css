@@ -13,6 +13,7 @@ ul, li, a {
 body {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 /* 햄버거 아이콘 */
@@ -65,10 +66,11 @@ header {
     width: 100%;
     height: 120px;
     background-color: maroon;
-    position: absolute;
     left: 0;
     top: 0;
     z-index: 3;
+    opacity: 0.8;
+    position: sticky;
 }
 
 header .small .logo img {
@@ -79,8 +81,9 @@ header .small .logo img {
 
 header #header_menu ul { 
     width: 100%;
-    height: 50px;
+    height: 40px;
 }
+
 header #header_menu li a{
     text-decoration: none;
     padding: 15px;
@@ -89,12 +92,74 @@ header #header_menu li a{
 
 #header_menu .header_sub_menu {
     display: none;
+    width: 100%;
+    position: relative;
+    height: auto;
 }
+.header_sub_menu li {
+    line-height: 20px;
+    font-size: 14px;
+}
+
 
 footer {
     width: 100%;
-    height: 240px;
+    height: auto;
     background-color: skyblue;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer #ft_mail {
+    margin: 40px;
+    background-image: url(../img/ft_mail_btn.png);
+    background-position: center;
+    background-size: cover;
+    width: 420px;
+    height: 100px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+footer #ft_menu ul {
+    width: 100%;
+    height: 30px;
+    display: flex;
+}
+
+footer #ft_menu li {
+    line-height: 30px;
+    font-size: 14px;
+}
+
+footer #ft_menu li a {
+    text-decoration: none;
+    padding: 15px;
+    color:#fff;
+}
+
+footer #ft_icon {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#ft_icon a {
+    font-size: 30px;
+    margin: 20px;
+}
+
+footer h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin: 10px;
 }
 
 
@@ -120,6 +185,12 @@ footer {
     #header_menu {
         display: none;
     }
+
+    header #header_menu ul { 
+        width: 100%;
+        height: 250px;
+    }
+
     #header_menu li a {
         text-decoration: none;
         padding: 15px;
@@ -127,18 +198,80 @@ footer {
         display: block;
     }
 
-    #header_menu ul {
-        background-color: pink;
+    #header_menu ul a:hover {
+        background-color: hotpink;
+    }
+    footer #ft_menu ul {
+        width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
+    }
+
+    footer #ft_menu li {
+        border-top: 2px dotted #aaa;
+        width: 400px;
+        text-align: center;
+    }
+    footer #ft_menu li:last-of-type {
+        border-bottom: 2px dotted #aaa;
+    }
+
+}
+
+@media (min-width: 593px) {
+    header .small {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        line-height: 120px;
+    }
+
+    header .small .logo {
+        margin-left: 5px;
+    }
+    header .small .logo img {
+        position: relative;
+        top: 17px;
+    }
+    #hamburger {
+        display: block;
+        margin-right: 40px;
+    }
+    #header_menu {
+        display: none;
+    }
+
+    #header_menu li {
+        width: 100%;
+    }
+    #header_menu li a {
+        text-decoration: none;
+        padding: 15px;
+        color:#fff;
+        display: block;
     }
 
     #header_menu ul a:hover {
         background-color: hotpink;
     }
+    footer #ft_menu ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    footer #ft_menu li {
+        border-top: 2px dotted #aaa;
+        width: 400px;
+        text-align: center;
+    }
+    footer #ft_menu li:last-of-type {
+        border-bottom: 2px dotted #aaa;
+    }
 }
 
-@media (min-width: 593px) {
+@media (min-width: 785px) {
     header {
         display: flex;
         align-items: center;
@@ -154,8 +287,11 @@ footer {
 
     #header_menu ul {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+    }
+    header #header_menu li { 
+        width: 120px;
+        height: 40px;
+        text-align: center;
     }
 
     #header_menu li a{
@@ -163,14 +299,35 @@ footer {
         padding: 15px;
         color:#fff;
     }
-}
-
-@media (min-width: 785px) {
-
+    
 }
 
 @media (min-width: 1009px) {
-
+    footer #ft_menu ul {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    footer #ft_menu li:after {
+        content: '|';
+        color: #fff;
+    }
+    
+    footer #ft_menu li:last-of-type:after {
+        content: "";
+    }
+    footer #ft_menu li {
+        line-height: 30px;
+        font-size: 14px;
+        border: none;
+        width: auto;
+    }
+    footer #ft_menu li:last-of-type {
+        border:none;
+    }
+    
 }
 
 @media (min-width: 1217px) {

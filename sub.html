@@ -7,13 +7,62 @@
 
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sub.css">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/54be9efe2e.js" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script>
+        
+    </script>
     <style>
 
     </style>
 </head>
 <body>
     <header>
-
+        <div class="small">
+            <div class="logo"><img src="img/logo.png" alt=""></div>
+            <div id="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+        <nav id="header_menu">
+            <ul>
+                <li><a href="#" id="h_nav">HOME</a>
+                    <ul class="header_sub_menu" id="h_sub">
+                        <li><a href="">Familysite</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="n_nav">NEWS</a>
+                    <ul class="header_sub_menu" id="n_sub">
+                        <li><a href="">행사소식</a></li>
+                        <li><a href="">공지사항</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="a_nav">ABOUT</a>
+                    <ul class="header_sub_menu" id="a_sub">
+                        <li><a href="">먼작귀는?</a></li>
+                        <li><a href="">캐릭터소개</a></li>
+                        <li><a href="">시놉시스</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="e_nav">EPISODE</a>
+                    <ul class="header_sub_menu" id="e_sub">
+                        <li><a href="">애니메이션</a></li>
+                        <li><a href="">기타매체</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="g_nav">GOODS</a>
+                    <ul class="header_sub_menu" id="g_sub">
+                        <li><a href="">굿즈</a></li>
+                        <li><a href="">고객지원</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
     <div id="wrap">
         <div id="character">
@@ -34,7 +83,26 @@
         </div>
     </div>
     <footer>
-
+        <button id="ft_mail"></button>
+        <nav id="ft_menu">
+            <ul>
+                <li><a href="">이용 약관</a></li>
+                <li><a href="">개인 정보 보호 정책</a></li>
+                <li><a href="">특정 상거래법에 근거한 표기</a></li>
+                <li><a href="">회사개요</a></li>
+                <li><a href="">이용 가이드</a></li>
+                <li><a href="">자주 묻는 질문</a></li>
+                <li><a href="">문의</a></li>
+                <li><a href="">OEM 상담</a></li>
+            </ul>
+        </nav>
+        <div id="ft_icon">
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-line"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+        </div>
+        <h4>©nagano/chiikawa committee ©Gray Parka Service</h4>
     </footer>
 </body>
 </html>

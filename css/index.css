@@ -118,6 +118,10 @@ button {
         background-color: #ccc;
         flex-wrap: wrap;
     }
+    #slider1 {
+        width: 100%;
+        background-color: pink;
+    }
 
     #character {
         width: 100%;
@@ -154,6 +158,10 @@ button {
         margin: 0 auto;
         background-color: #ccc;
         flex-wrap: wrap;
+    }
+    #slider1 {
+        width: 100%;
+        background-color: pink;
     }
 
     #character {
@@ -192,6 +200,10 @@ button {
         background-color: #ccc;
         flex-wrap: wrap;
     }
+    #slider1 {
+        width: 100%;
+        background-color: pink;
+    }
 
     #character {
         width: 100%;
@@ -229,6 +241,10 @@ button {
         background-color: #ccc;
         flex-wrap: wrap;
     }
+    #slider1 {
+        width: 100%;
+        background-color: pink;
+    }
 
     #character {
         width: 100%;
@@ -265,6 +281,11 @@ button {
         margin: 0 auto;
         background-color: #ccc;
         flex-wrap: wrap;
+    }
+    #slider1 {
+        width: 100%;
+        height: 600px;
+        background-color: pink;
     }
 
     #character {
