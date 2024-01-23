@@ -5,6 +5,76 @@
     height: 600px;
     background-color: pink;
 }
+/* 슬라이더 슬라이드이미지 */
+#slider1 #s1_imgbox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    height: 450px;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+}
+.s1_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.s1_img img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 600ms ease-in-out;
+}
+.s1_img img.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.s1_thumbnail {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,240px);
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.s1_thumbnail img{
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+.s1_thumbnail img.active {
+    border: 3px solid #fff;
+}
+
+.s1_btn a {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    transition: all 400ms ease-in-out;
+}
+.s1_btn a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.s1_btn a.next{
+    right: 0;
+}
+.s1_btn a.previous {
+    left: 0;
+}
 
 section {
     display: flex;
@@ -30,9 +100,39 @@ section {
 }
 
 #news .artbox article {
-    width: 270px;
+    width: 22.5%;
     height: 300px;
     background-color: #333;
+}
+#news .artbox #art_01 {
+    background-image: url(../img/news_01.jpg);
+}
+
+#news .artbox #art_02 {
+    background-image: url(../img/news_02.jpg);
+}
+
+#news .artbox #art_03 {
+    background-image: url(../img/news_04.jpg);
+}
+
+#news .artbox #art_04 {
+    background-image: url(../img/news_06.jpg);
+}
+
+#news .artbox article {
+    background-position-y: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#news .artbox article p {
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    position: relative;
+    color: #fff;
+    top: 65%;
 }
 
 #character {
@@ -67,8 +167,9 @@ section {
 
 #video {
     width: 100%;
-    height: 360px;
+    height: 400px;
     background-color: yellowgreen;
+    display: flex;
 }
 
 #goods {
@@ -86,7 +187,6 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: yellow
 }
 
 #goods h1 {
@@ -95,16 +195,87 @@ section {
 }
 
 #goods .goodsbox article {
-    width: 270px;
+    width: 22.5%;
     height: 270px;
-    background-color: #333;
 }
+
+#goods .goodsbox #goods_01 {
+    background-image: url(../img/goods_01.png);
+}
+
+#goods .goodsbox #goods_02 {
+    background-image: url(../img/goods_02.png);
+}
+
+#goods .goodsbox #goods_03 {
+    background-image: url(../img/goods_03.png);
+}
+
+#goods .goodsbox #goods_04 {
+    background-image: url(../img/goods_04.png);
+}
+
+#goods .goodsbox article {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+
+#goods .goodsbox .goods_txtbox {
+    width: 100%;
+    height: 30%;
+    background-color: #333;
+    position: relative;
+    opacity: 0.7;
+    color: #fff;
+    top: 65%;
+    padding: 15px;
+    text-align: end;
+    display: none;
+}
+
+#goods_01:hover >.goods_txtbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#goods_02:hover >.goods_txtbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#goods_03:hover >.goods_txtbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#goods_04:hover >.goods_txtbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 button {
     width: 300px;
     height: 60px;
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+button a {
+    text-decoration: none;
+    color: #000;
+}
+
+#ex_img {
+    margin: 0 auto;
+}
+#ex_img img {
+    width: 100%;
 }
 
 /* 미디어쿼리 */
@@ -113,7 +284,7 @@ button {
     section {
         display: flex;
         width: 100%;
-        height: 450px;
+        height: 400px;
         margin: 0 auto;
         background-color: #ccc;
         flex-wrap: wrap;
@@ -132,6 +303,11 @@ button {
         width: 100%;
         height: 50px;
     }
+    #news .artbox article {
+        width: 45%;
+        height: 300px;
+        background-color: #333;
+    }
 
     #news h1 {
         height: 50px;
@@ -147,6 +323,11 @@ button {
         height: 420px;
         display: flex;
         flex-wrap: wrap;
+    }
+
+    #goods .goodsbox article {
+        width: 45%;
+        height: 270px;
     }
 }
 
@@ -154,7 +335,7 @@ button {
     section {
         display: flex;
         width: 100%;
-        height: 450px;
+        height: 410px;
         margin: 0 auto;
         background-color: #ccc;
         flex-wrap: wrap;
@@ -174,6 +355,12 @@ button {
         height: 60px;
     }
 
+    #news .artbox article {
+        width: 30%;
+        height: 300px;
+        background-color: #333;
+    }
+
     #news h1 {
         height: 60px;
     }
@@ -188,6 +375,11 @@ button {
         height: 420px;
         display: flex;
         flex-wrap: wrap;
+    }
+
+    #goods .goodsbox article {
+        width: 30%;
+        height: 270px;
     }
 }
 
@@ -195,7 +387,7 @@ button {
     section {
         display: flex;
         width: 100%;
-        height: 450px;
+        height: 420px;
         margin: 0 auto;
         background-color: #ccc;
         flex-wrap: wrap;
@@ -215,6 +407,12 @@ button {
         height: 70px;
     }
 
+    #news .artbox article {
+        width: 30%;
+        height: 300px;
+        background-color: #333;
+    }
+
     #news h1 {
         height: 70px;
     }
@@ -229,6 +427,11 @@ button {
         height: 420px;
         display: flex;
         flex-wrap: wrap;
+    }
+
+    #goods .goodsbox article {
+        width: 30%;
+        height: 270px;
     }
 }
 
@@ -236,7 +439,7 @@ button {
     section {
         display: flex;
         width: 100%;
-        height: 450px;
+        height: 430px;
         margin: 0 auto;
         background-color: #ccc;
         flex-wrap: wrap;
@@ -260,6 +463,12 @@ button {
         height: 80px;
     }
 
+    #news .artbox article {
+        width: 22.5%;
+        height: 300px;
+        background-color: #333;
+    }
+
     #episode h1 {
         width: 100%;
         height: 80px;
@@ -270,6 +479,11 @@ button {
         height: 420px;
         display: flex;
         flex-wrap: wrap;
+    }
+
+    #goods .goodsbox article {
+        width: 22.5%;
+        height: 270px;
     }
 }
 
@@ -300,6 +514,12 @@ button {
         background-color: #ccc;
     }
 
+    #news .artbox article {
+        width: 22.5%;
+        height: 300px;
+        background-color: #333;
+    }
+
     #news h1 {
         height: 90px;
     }
@@ -317,4 +537,10 @@ button {
         margin: 0 auto;
         background-color: #ccc;
     }
+
+    #goods .goodsbox article {
+        width: 22.5%;
+        height: 270px;
+    }
+    
 }
