@@ -10,7 +10,8 @@
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/54be9efe2e.js" crossorigin="anonymous"></script>
-    <script src="js/common.js"></script>    
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script> 
     <style>
 
     </style>
@@ -66,12 +67,12 @@
             <div class="s1_img"></div>
             <div class="s1_thumnail"></div>
             <div class="s1_btn">
-                <a href="#" class="previous"><i class="fa-solid fa-caret-left"></i></a>
-                <a href="#" class="next"><i class="fa-solid fa-caret-right"></i></a>
+                <a href="javascript:void(0);" class="previous"><i class="fa-solid fa-caret-left"></i></a>
+                <a href="javascript:void(0);" class="next"><i class="fa-solid fa-caret-right"></i></a>
             </div>
         </div>
     </div>
-    <script src="js/index.js"></script>
+    <script src="js/index_slider_1.js"></script>
     <section id="news">
         <h1>News</h1>
         <div class="artbox">
@@ -94,16 +95,24 @@
         <h1>About Characters</h1>
     </div>
     <div id="slider2">
-
+        <div id="s2_imgbox">
+            <div class="s2_img"></div>
+            <div class="s2_thumnail"></div>
+            <div class="s2_btn">
+                <a href="javascript:void(0);" class="previous"><i class="fa-solid fa-caret-left"></i></a>
+                <a href="javascript:void(0);" class="next"><i class="fa-solid fa-caret-right"></i></a>
+            </div>
+        </div>
     </div>
+    <script src="js/index_slider_2.js"></script>
     <div id="episode">
         <h1>Episode</h1>
     </div>
     <div id="video">
         <!-- <div id="decobox"></div> -->
         <div class="video_wrap">
-            <div class="video_1 popup">
-                <video src="video/chiikawa_pv.mp4" loop muted></video>
+            <div class="video_1">
+                <video src="video/chiikawa_pv.mp4" muted class="pv show" type="video/mp4"></video>
                 <div class="play_btn"><i class="fa-regular fa-circle-play"></i></div>
             </div>
             <div class="video_2 popup">
