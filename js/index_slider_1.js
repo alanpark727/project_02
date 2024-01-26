@@ -1,7 +1,9 @@
 let images1 = [
-    './img/banner_01.png',
-    './img/banner_02.png',
-    './img/banner_03.png',
+    './img/banner_01.jpg',
+    './img/c_banner_02.png',
+    './img/c_banner_03.png',
+    './img/c_banner_04.png',
+    './img/c_banner_05.png'
 ];
 
 function ImageSlider(parent, images1) {

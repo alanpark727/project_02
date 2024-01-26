@@ -82,12 +82,10 @@ a {
 }
 
 section {
-    display: flex;
     width: 1200px;
-    height: 450px;
+    height: auto;
     margin: 0 auto;
     background-color: #ccc;
-    flex-wrap: wrap;
 }
 
 #news .artbox {
@@ -95,13 +93,9 @@ section {
     height: auto;
     background-color: yellow;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-}
-
-#news h1 {
-    width: 100%;
-    height: 90px;
+    align-content: space-around;
 }
 
 #news .artbox article {
@@ -109,26 +103,9 @@ section {
     height: 300px;
     background-color: #333;
 }
-#news .artbox #art_01 {
-    background-image: url(../img/news_01.jpg);
-}
 
-#news .artbox #art_02 {
-    background-image: url(../img/news_02.jpg);
-}
-
-#news .artbox #art_03 {
-    background-image: url(../img/news_04.jpg);
-}
-
-#news .artbox #art_04 {
-    background-image: url(../img/news_06.jpg);
-}
-
-#news .artbox article {
-    background-position-y: 10%;
-    background-size: contain;
-    background-repeat: no-repeat;
+#news .artbox article img {
+    width: 100%;
 }
 
 #news .artbox article p {
@@ -137,7 +114,6 @@ section {
     padding: 10px;
     position: relative;
     color: #fff;
-    top: 65%;
 }
 
 #character {
@@ -147,7 +123,6 @@ section {
 
 #character h1 {
     width: 1200px;
-    height: 90px;
     margin: 0 auto;
     background-color: #ccc;
 }
@@ -232,12 +207,10 @@ section {
 
 #episode {
     width: 100%;
-    height: 90px;
 }
 
 #episode h1 {
     width: 1200px;
-    height: 90px;
     margin: 0 auto;
     background-color: #ccc;
 }
@@ -297,9 +270,7 @@ section {
 
 #goods {
     width: 1200px;
-    height: 420px;
-    display: flex;
-    flex-wrap: wrap;
+    height: auto;
     margin: 0 auto;
     background-color: #ccc;
 }
@@ -312,71 +283,44 @@ section {
     align-items: center;
 }
 
+#goods .goodsbox img {
+    width: 100%;
+}
+
 #goods h1 {
     width: 100%;
-    height: 90px;
 }
 
 #goods .goodsbox article {
     width: 22.5%;
     height: 270px;
-}
-
-#goods .goodsbox #goods_01 {
-    background-image: url(../img/goods_01.png);
-}
-
-#goods .goodsbox #goods_02 {
-    background-image: url(../img/goods_02.png);
-}
-
-#goods .goodsbox #goods_03 {
-    background-image: url(../img/goods_03.png);
-}
-
-#goods .goodsbox #goods_04 {
-    background-image: url(../img/goods_04.png);
-}
-
-#goods .goodsbox article {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     cursor: pointer;
 }
 
 #goods .goodsbox .goods_txtbox {
     width: 100%;
-    height: 30%;
+    height: 35%;
     background-color: #333;
-    position: relative;
     opacity: 0.7;
     color: #fff;
-    top: 65%;
     padding: 15px;
     text-align: end;
+    position: relative;
+    top: -40%;
     display: none;
 }
 
 #goods_01:hover >.goods_txtbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: block;
 }
 #goods_02:hover >.goods_txtbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: block;
 }
 #goods_03:hover >.goods_txtbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: block;
 }
 #goods_04:hover >.goods_txtbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: block;
 }
 
 button {
@@ -405,16 +349,20 @@ button a {
 
 @media (max-width: 592px) {
     section {
-        display: flex;
         width: 100%;
-        height: 400px;
+        height: 350vw;
         margin: 0 auto;
         background-color: #ccc;
-        flex-wrap: wrap;
     }
+    
     #slider1 {
         width: 100%;
+        height: 70vw;
         background-color: pink;
+    }
+
+    .s1_thumnail {
+        display: none;
     }
 
     #character {
@@ -422,50 +370,83 @@ button a {
         height: auto;
     }
 
-    #character h1 {
+    #slider2{
         width: 100%;
-        height: 50px;
-    }
-    #news .artbox article {
-        width: 45%;
-        height: 300px;
-        background-color: #333;
+        height: 85vw;
     }
 
-    #news h1 {
+    .s2_thumnail {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,32vw);
+        width: 100px;
         height: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #news .artbox {
+        width: 100%;
+        height: 350vw;
+        background-color: yellow;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        padding-bottom: 30px;
+    }
+
+    #news .artbox article {
+        width: 90%;
+        height: 80vw;
+        background-color: #333;
     }
 
     #episode h1 {
         width: 100%;
-        height: 50px;
     }
 
     #goods {
         width: 100%;
-        height: 420px;
+        height: 380vw;
+        margin: 0 auto;
+        background-color: #ccc;
+    }
+
+    #goods .goodsbox {
+        width: 100%;
+        height: 370vw;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        background-color: yellow;
+        padding-bottom: 30px;
     }
 
     #goods .goodsbox article {
-        width: 45%;
-        height: 270px;
+        width: 90%;
+        height: 80vw;
     }
 }
 
 @media (min-width: 593px) {
     section {
-        display: flex;
         width: 100%;
-        height: 410px;
         margin: 0 auto;
         background-color: #ccc;
-        flex-wrap: wrap;
     }
+
     #slider1 {
         width: 100%;
+        height: 70vw;
         background-color: pink;
+    }
+
+    .s1_thumnail {
+        display: none;
     }
 
     #character {
@@ -473,51 +454,74 @@ button a {
         height: auto;
     }
 
-    #character h1 {
+    #slider2{
         width: 100%;
-        height: 60px;
+        height: 85vw;
+    }
+
+    .s2_thumnail {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,32vw);
+        width: 100px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #news .artbox {
+        width: 100%;
+        height: 110vw;
+        background-color: yellow;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     #news .artbox article {
-        width: 30%;
-        height: 300px;
+        width: 43%;
+        height: 43%;
         background-color: #333;
-    }
-
-    #news h1 {
-        height: 60px;
     }
 
     #episode h1 {
         width: 100%;
-        height: 60px;
     }
 
     #goods {
         width: 100%;
-        height: 420px;
+        margin: 0 auto;
+        background-color: #ccc;
+    }
+
+    #goods .goodsbox {
+        width: 100%;
+        height: 100vw;
         display: flex;
         flex-wrap: wrap;
     }
 
     #goods .goodsbox article {
-        width: 30%;
-        height: 270px;
+        width: 43%;
+        height: 43%;
     }
 }
 
 @media (min-width: 785px) {
-    section {
-        display: flex;
-        width: 100%;
-        height: 420px;
-        margin: 0 auto;
-        background-color: #ccc;
-        flex-wrap: wrap;
-    }
     #slider1 {
         width: 100%;
+        height: 70vw;
         background-color: pink;
+    }
+
+    #slider1 #s1_imgbox {
+        position: relative;
+        left: 50%;
+        top: 44%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        height: 500px;
     }
 
     #character {
@@ -525,47 +529,59 @@ button a {
         height: auto;
     }
 
-    #character h1 {
+    #slider2{
         width: 100%;
-        height: 70px;
+        height: 600px;
     }
 
-    #news .artbox article {
-        width: 30%;
-        height: 300px;
-        background-color: #333;
-    }
-
-    #news h1 {
-        height: 70px;
+    .s2_thumnail {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,240px);
+        width: 100px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 25px;
     }
 
     #episode h1 {
         width: 100%;
-        height: 70px;
     }
+    
+}
 
-    #goods {
+@media (min-width:910px) {
+    #slider1 {
         width: 100%;
-        height: 420px;
+        height: 600px;
+        background-color: pink;
+    }
+    #slider1 #s1_imgbox {
+        position: relative;
+        left: 50%;
+        top: 44%;
+        transform: translate(-50%,-50%);
+        width: 100vw;
+    }
+    .s1_thumnail {
         display: flex;
-        flex-wrap: wrap;
     }
 
-    #goods .goodsbox article {
-        width: 30%;
-        height: 270px;
+    #slider2{
+        width: 100%;
+        height: 600px;
     }
+
 }
 
 @media (min-width: 1009px) {
     section {
-        display: flex;
         width: 100%;
-        height: 430px;
         margin: 0 auto;
         background-color: #ccc;
-        flex-wrap: wrap;
     }
     #slider1 {
         width: 100%;
@@ -577,13 +593,13 @@ button a {
         height: auto;
     }
 
-    #character h1 {
+    #news .artbox {
         width: 100%;
-        height: 80px;
-    }
-
-    #news h1 {
-        height: 80px;
+        height: 350px;
+        background-color: yellow;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
     }
 
     #news .artbox article {
@@ -594,34 +610,31 @@ button a {
 
     #episode h1 {
         width: 100%;
-        height: 80px;
     }
 
-    #goods {
+    #goods .goodsbox {
         width: 100%;
-        height: 420px;
+        height: 300px;
         display: flex;
         flex-wrap: wrap;
+        align-content: space-around;
     }
 
     #goods .goodsbox article {
-        width: 22.5%;
+        width: 23%;
         height: 270px;
     }
 }
 
 @media (min-width: 1217px) {
     section {
-        display: flex;
         width: 1200px;
-        height: 450px;
         margin: 0 auto;
         background-color: #ccc;
-        flex-wrap: wrap;
     }
+
     #slider1 {
         width: 100%;
-        height: 600px;
         background-color: pink;
     }
 
@@ -630,40 +643,14 @@ button a {
         height: auto;
     }
 
-    #character h1 {
-        width: 1200px;
-        height: 90px;
-        margin: 0 auto;
-        background-color: #ccc;
-    }
-
-    #news .artbox article {
-        width: 22.5%;
-        height: 300px;
-        background-color: #333;
-    }
-
-    #news h1 {
-        height: 90px;
-    }
-
     #episode h1 {
         width: 1200px;
-        height: 90px;
     }
 
     #goods {
         width: 1200px;
-        height: 420px;
-        display: flex;
-        flex-wrap: wrap;
         margin: 0 auto;
         background-color: #ccc;
-    }
-
-    #goods .goodsbox article {
-        width: 22.5%;
-        height: 270px;
     }
     
 }

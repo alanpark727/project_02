@@ -97,9 +97,17 @@ header #header_menu li a{
     height: auto;
 }
 .header_sub_menu li {
-    line-height: 20px;
+    line-height: 10px;
     font-size: 14px;
+    background-color: #000;
 }
+header .upper_menu {
+    display: flex;
+    flex-direction: column;
+}
+/* #icon_menu {
+    display: flex;
+} */
 
 
 footer {
@@ -160,6 +168,14 @@ footer h4 {
     text-align: center;
     font-size: 12px;
     margin: 10px;
+}
+
+#scrolltop {
+    position: fixed;
+    max-width: 40px;
+    left: 4%;
+    top: 88%;
+    display: none;
 }
 
 
@@ -271,6 +287,14 @@ footer h4 {
     }
 }
 
+@media (max-width: 784px) {
+    #header_menu ul>li a {
+        background-color: #000;
+    }
+    #header_menu ul>li a:hover {
+        background-color: hotpink;
+    }
+}
 @media (min-width: 785px) {
     header {
         display: flex;
