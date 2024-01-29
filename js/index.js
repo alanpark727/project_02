@@ -20,4 +20,23 @@ $(function () {
         $('html, body').animate({ scrollTop: 0 }, 400);
         return false;
     });
+
 });
+$(function () {
+    let pv = document.getElementById("chiikawa_pv");
+    $(".play_btn").click(function(){
+        if(pv.paused==true){
+            pv.play();
+            $(this).hide();
+        } else {
+            pv.pause();
+        }
+    });
+    $(pv).mouseover(function(){
+        $(".video_1>button").fadeIn();
+    });
+    $(pv).mouseout(function(){
+        $(".video_1>button").fadeOut();
+    });
+});
+    
