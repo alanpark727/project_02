@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +12,16 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/54be9efe2e.js" crossorigin="anonymous"></script>
     <script src="js/common.js"></script>
-    <script src="js/index.js"></script> 
+    <script src="js/index.js"></script>
     <style>
 
     </style>
 </head>
+
 <body>
     <header>
         <div class="small">
-            <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+            <div class="logo"><a href="index.html"><img src="img/logo_pink.png" alt=""></a></div>
             <div id="hamburger">
                 <span class="line"></span>
                 <span class="line"></span>
@@ -57,7 +59,7 @@
                     <li><a href="#" id="e_nav">EPISODE</a>
                         <ul class="header_sub_menu" id="e_sub">
                             <li><a href="">애니메이션</a></li>
-                            <li><a href="">기타매체</a></li>
+                            <li><a href="">BD & DVD</a></li>
                         </ul>
                     </li>
                     <li><a href="#" id="g_nav">GOODS</a>
@@ -76,107 +78,125 @@
             </nav>
         </div>
     </header>
-    <div id="slider1">
-        <div id="s1_imgbox">
-            <div class="s1_img"></div>
-            <div class="s1_thumnail"></div>
-            <div class="s1_btn">
-                <a href="javascript:void(0);" class="previous"><i class="fa-solid fa-caret-left"></i></a>
-                <a href="javascript:void(0);" class="next"><i class="fa-solid fa-caret-right"></i></a>
-            </div>
-        </div>
-    </div>
-    <script src="js/index_slider_1.js"></script>
-    <section id="news">
-        <h1>News</h1>
-        <div class="artbox">
-            <article id="art_01">
-                <img src="img/news_01.jpg" alt="art_01">
-                <p>라인 스탬프 제 2탄 무료배포!
-                    <br>2023.11.21~2024.2.12</p>
-            </article>
-            <article id="art_02">
-                <img src="img/news_02.jpg" alt="art_02">
-                <p>WEB샵. 치이카와 마켓</p>
-            </article>
-            <article id="art_03">
-                <img src="img/news_04.jpg" alt="art_03">
-                <p>치이카와랜드(영업점) 오픈소식</p>
-            </article>
-            <article id="art_04">
-                <img src="img/news_06.jpg" alt="art_04">
-                <p>치이카와 카페, 전국에 기간한정 카페 오픈</p>
-            </article>
-        </div>
-    </section>
-    <div id="character">
-        <h1>About Characters</h1>
-    </div>
-    <div id="slider2">
-        <div id="s2_imgbox">
-            <div class="s2_img"></div>
-            <div class="s2_thumnail"></div>
-            <div class="s2_btn">
-                <a href="javascript:void(0);" class="previous"><i class="fa-solid fa-caret-left"></i></a>
-                <a href="javascript:void(0);" class="next"><i class="fa-solid fa-caret-right"></i></a>
-            </div>
-        </div>
-    </div>
-    <script src="js/index_slider_2.js"></script>
-    <div id="episode">
-        <h1>Episode</h1>
-    </div>
-    <div id="video">
-        <!-- <div id="decobox"></div> -->
-        <div class="video_wrap">
-            <div class="video_1">
-                <video src="video/chiikawa_pv.mp4" id="chiikawa_pv" poster="img/eye_catch.gif"></video>
-                <button class="play_btn"></button>
-            </div>
-            <div class="video_2 popup">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kzAfNg6pAvI?list=PLsmaUhkCwW3q5q46uc9So2b4D-pZqVZOV" title="[전편공개]먼작귀(먼가 작고 귀여운 녀석) 1화_단단한 푸딩, 핫케이크" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="video_3 popup">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XOFewWJQ_34?list=PLsmaUhkCwW3q2CHL1QXMcelAYZ_EKuX8X" title="단단한 푸딩_먼작귀 1화_먼가작고귀여운녀석_#shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    <div id="goods">
-        <h1>Goods</h1>
-        <div class="goodsbox">
-            <article id="goods_01">
-                <img src="img/goods_01.png" alt="goods_01">
-                <div class="goods_txtbox">
-                    <p>치이카와 마시멜로 같은 잠자는 봉제인형</p>
-                    <h3>네무네무 치이카와</h3>
+    <div id="bgwrap">
+        <div id="slider1">
+            <div id="s1_imgbox">
+                <div class="s1_img"></div>
+                <div class="s1_thumnail"></div>
+                <div class="s1_btn">
+                    <a href="javascript:void(0);" class="previous"><i class="fa-solid fa-caret-left"></i></a>
+                    <a href="javascript:void(0);" class="next"><i class="fa-solid fa-caret-right"></i></a>
                 </div>
-            </article>
-            <article id="goods_02">
-                <img src="img/goods_02.png" alt="goods_02">
-                <div class="goods_txtbox">
-                    <p>치이카와 마시멜로 같은 잠자는 봉제인형</p>
-                    <h3>네무네무 하치와레</h3>
-                </div>
-            </article>
-            <article id="goods_03">
-                <img src="img/goods_03.png" alt="goods_03">
-                <div class="goods_txtbox">
-                    <p>치이카와 300pcs 직소퍼즐</p>
-                    <h3>no.300-3062<br>선생님과</h3>
-                </div>
-            </article>
-            <article id="goods_04">
-                <img src="img/goods_04.png" alt="goods_04">
-                <div class="goods_txtbox">
-                    <p>치이카와 캬라피타 아일론프린트 미니1</p>
-                    <h3>치이카와</h3>
-                </div>
-            </article>
+            </div>
         </div>
-    </div>
-    <button><a href="#">더 많은 상품보기</a></button>
-    <div id="ex_img">
-    <img src="img/footer_chiikawa.gif" alt="animate_img">
+        <script src="js/index_slider_1.js"></script>
+        <section id="news">
+            <h1>소식 / 정보</h1>
+            <h5>NEWS</h5>
+            <div class="artbox">
+                <article id="art_01">
+                    <img src="img/news_01.jpg" alt="art_01">
+                    <p>라인 스탬프 제 2탄 무료배포!
+                        <br>2023.11.21~2024.2.12
+                    </p>
+                </article>
+                <article id="art_02">
+                    <img src="img/news_02.jpg" alt="art_02">
+                    <p>WEB샵. 치이카와 마켓</p>
+                </article>
+                <article id="art_03">
+                    <img src="img/news_04.jpg" alt="art_03">
+                    <p>치이카와랜드(영업점) 오픈소식</p>
+                </article>
+                <article id="art_04">
+                    <img src="img/news_06.jpg" alt="art_04">
+                    <p>치이카와 카페, 전국에 기간한정 카페 오픈</p>
+                </article>
+            </div>
+        </section>
+        <div id="character">
+            <h1>캐릭터 소개</h1>
+            <h5>ABOUT CHARACTERS</h5>
+        </div>
+        <div id="slider2">
+            <div id="s2_imgbox">
+                <div class="s2_img"></div>
+                <div class="s2_thumnail"></div>
+                <div class="s2_btn">
+                    <a href="javascript:void(0);" class="previous"><i class="fa-solid fa-caret-left"></i></a>
+                    <a href="javascript:void(0);" class="next"><i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+            <img src="img/chi.png" alt="" class="chc_ani chi_1">
+        </div>
+        <script src="js/index_slider_2.js"></script>
+        <div id="episode">
+            <h1>이야기</h1>
+            <h5>EPISODES</h5>
+        </div>
+        <div id="video">
+            <!-- <div id="decobox"></div> -->
+            <div class="video_wrap">
+                <div class="video_1">
+                    <video src="video/chiikawa_pv.mp4" id="chiikawa_pv" poster="img/eye_catch.gif"
+                        class=" vFrame"></video>
+                    <button class="play_btn"></button>
+                </div>
+                <div class="video_2 vFrame">
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/kzAfNg6pAvI?list=PLsmaUhkCwW3q5q46uc9So2b4D-pZqVZOV"
+                        title="[전편공개]먼작귀(먼가 작고 귀여운 녀석) 1화_단단한 푸딩, 핫케이크" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video_3 vFrame">
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/XOFewWJQ_34?list=PLsmaUhkCwW3q2CHL1QXMcelAYZ_EKuX8X"
+                        title="단단한 푸딩_먼작귀 1화_먼가작고귀여운녀석_#shorts" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="goods">
+            <h1>굿즈</h1>
+            <h5>GOODS</h5>
+            <div class="goodsbox">
+                <article id="goods_01">
+                    <img src="img/goods_01.png" alt="goods_01">
+                    <div class="goods_txtbox">
+                        <p>치이카와 마시멜로 같은 잠자는 봉제인형</p>
+                        <h3>네무네무 치이카와</h3>
+                    </div>
+                </article>
+                <article id="goods_02">
+                    <img src="img/goods_02.png" alt="goods_02">
+                    <div class="goods_txtbox">
+                        <p>치이카와 마시멜로 같은 잠자는 봉제인형</p>
+                        <h3>네무네무 하치와레</h3>
+                    </div>
+                </article>
+                <article id="goods_03">
+                    <img src="img/goods_03.png" alt="goods_03">
+                    <div class="goods_txtbox">
+                        <p>치이카와 300pcs 직소퍼즐</p>
+                        <h3>no.300-3062<br>선생님과</h3>
+                    </div>
+                </article>
+                <article id="goods_04">
+                    <img src="img/goods_04.png" alt="goods_04">
+                    <div class="goods_txtbox">
+                        <p>치이카와 캬라피타 아일론프린트 미니1</p>
+                        <h3>치이카와</h3>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <img src="img/ha.png" alt="" class="chc_ani hat_1">
+        <button><a href="#">더 많은 상품보기</a></button>
+        <div id="ex_img">
+            <img src="img/footer_chiikawa.gif" alt="animate_img">
+        </div>
     </div>
     <footer>
         <button id="ft_mail"></button>
@@ -202,4 +222,5 @@
         <a href="#"><img src="img/scrolltop.png" alt="scrolltop" id="scrolltop"></a>
     </footer>
 </body>
+
 </html>

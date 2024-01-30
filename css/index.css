@@ -7,7 +7,6 @@ a {
 #slider1 {
     width: 100%;
     height: 600px;
-    background-color: pink;
 }
 
 #slider1 #s1_imgbox {
@@ -55,7 +54,7 @@ a {
     border: 3px solid transparent;
 }
 .s1_thumnail img.active {
-    border: 3px solid #fff;
+    border: 3px solid #ff96d2;
 }
 
 .s1_btn a {
@@ -85,13 +84,24 @@ section {
     width: 1200px;
     height: auto;
     margin: 0 auto;
-    background-color: #ccc;
+}
+
+section>h1{
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 36px;
+    margin: 30px 0px;
+}
+
+#bgwrap h5 {
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    margin: -30px 0px 20px 0px;
 }
 
 #news .artbox {
     width: 100%;
     height: auto;
-    background-color: yellow;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -102,6 +112,7 @@ section {
     width: 22.5%;
     height: 300px;
     background-color: #333;
+    cursor: pointer;
 }
 
 #news .artbox article img {
@@ -124,13 +135,15 @@ section {
 #character h1 {
     width: 1200px;
     margin: 0 auto;
-    background-color: #ccc;
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 36px;
+    margin: 30px 0px;
 }
 
 #slider2 {
     width: 100%;
     height: 600px;
-    background-color: sandybrown;
 }
 /* 슬라이더 슬라이드이미지 */
 #slider2 #s2_imgbox {
@@ -204,7 +217,6 @@ section {
     left: 0;
 }
 
-
 #episode {
     width: 100%;
 }
@@ -212,20 +224,21 @@ section {
 #episode h1 {
     width: 1200px;
     margin: 0 auto;
-    background-color: #ccc;
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 36px;
+    margin: 30px 0px;
 }
 
 #video {
     width: 100%;
     height: 400px;
-    background-color: yellowgreen;
     display: flex;
 }
 
 #video .video_wrap {
     width: 1200px;
     margin: 0 auto;
-    background-color: bisque;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -238,6 +251,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: -20px;
 }
 
 #video .video_2 {
@@ -250,6 +265,11 @@ section {
     width: 28%;
     height: 300px;
     order: 3;
+}
+#video .vFrame {
+    border: 10px solid #ff96d2;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px #333;
 }
 
 .video_1 video {
@@ -275,7 +295,6 @@ section {
     width: 1200px;
     height: auto;
     margin: 0 auto;
-    background-color: #ccc;
 }
 
 #goods .goodsbox {
@@ -292,6 +311,10 @@ section {
 
 #goods h1 {
     width: 100%;
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 36px;
+    margin: 30px 0px;
 }
 
 #goods .goodsbox article {
@@ -326,15 +349,65 @@ section {
     display: block;
 }
 
+.chc_ani {
+    width: 10vw;
+    position: relative;
+}
+
+.hat_1 {
+    left: 80%;
+    animation: chc_animation_rot 1s infinite alternate ease-in-out;
+}
+
+.chi_1 {
+    top: 10%;
+    left: 5%;
+    animation: chc_animation_jump 0.8s infinite alternate ease-in;
+}
+
+@keyframes chc_animation_rot {
+    from {
+        transform-origin: 50% 100%;
+        rotate: 0deg;
+    }
+
+    to {
+        transform-origin: 50% 100%;
+        rotate: 20deg;
+    }
+}
+
+@keyframes chc_animation_jump {
+    0% {
+        top: 0px;
+        width: 10vw;
+        height: 8vw;
+    }
+
+    5% {
+        width: 10vw;
+    }
+
+    95% {
+        width: 9vw;
+        height: 10vw;
+    }
+
+    100% {
+        top: -5vw;
+        width: 9vw;
+    }
+}
+
 button {
     width: 300px;
     height: 60px;
     margin: 0 auto;
-    margin-top: 40px;
     margin-bottom: 40px;
     border: none;
     border-radius: 20px;
     font-size: 16px;
+    display: block;
 }
 button a {
     text-decoration: none;
@@ -343,7 +416,9 @@ button a {
 
 #ex_img {
     margin: 0 auto;
+    text-align: center;
 }
+
 #ex_img img {
     width: 100%;
 }
@@ -355,22 +430,19 @@ button a {
         width: 100%;
         height: 350vw;
         margin: 0 auto;
-        background-color: #ccc;
     }
     
     #slider1 {
         width: 100%;
         height: 70vw;
-        background-color: pink;
     }
 
     .s1_thumnail {
         display: none;
     }
 
-    #character {
+    #character h1 {
         width: 100%;
-        height: auto;
     }
 
     #slider2{
@@ -392,8 +464,7 @@ button a {
 
     #news .artbox {
         width: 100%;
-        height: 350vw;
-        background-color: yellow;
+        height: 340vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -441,7 +512,6 @@ button a {
         width: 100%;
         height: 380vw;
         margin: 0 auto;
-        background-color: #ccc;
     }
 
     #goods .goodsbox {
@@ -458,28 +528,33 @@ button a {
         width: 90%;
         height: 80vw;
     }
+
+    #goods .goodsbox .goods_txtbox p{
+        font-size: 4vw;
+    }
+
+    #goods .goodsbox .goods_txtbox h3{
+        font-size: 7vw;
+    }
 }
 
 @media (min-width: 593px) {
     section {
         width: 100%;
         margin: 0 auto;
-        background-color: #ccc;
     }
 
     #slider1 {
         width: 100%;
         height: 70vw;
-        background-color: pink;
     }
 
     .s1_thumnail {
         display: none;
     }
 
-    #character {
+    #character h1 {
         width: 100%;
-        height: auto;
     }
 
     #slider2{
@@ -502,7 +577,6 @@ button a {
     #news .artbox {
         width: 100%;
         height: 110vw;
-        background-color: yellow;
         display: flex;
         flex-wrap: wrap;
     }
@@ -546,7 +620,6 @@ button a {
     #goods {
         width: 100%;
         margin: 0 auto;
-        background-color: #ccc;
     }
 
     #goods .goodsbox {
@@ -560,13 +633,20 @@ button a {
         width: 43%;
         height: 43%;
     }
+
+    #goods .goodsbox .goods_txtbox p{
+        font-size: 2.5vw;
+    }
+
+    #goods .goodsbox .goods_txtbox h3{
+        font-size: 3.5vw;
+    }
 }
 
 @media (min-width: 785px) {
     #slider1 {
         width: 100%;
         height: 70vw;
-        background-color: pink;
     }
 
     #slider1 #s1_imgbox {
@@ -611,7 +691,6 @@ button a {
     #slider1 {
         width: 100%;
         height: 600px;
-        background-color: pink;
     }
     #slider1 #s1_imgbox {
         position: relative;
@@ -635,11 +714,9 @@ button a {
     section {
         width: 100%;
         margin: 0 auto;
-        background-color: #ccc;
     }
     #slider1 {
         width: 100%;
-        background-color: pink;
     }
 
     #character {
@@ -650,7 +727,6 @@ button a {
     #news .artbox {
         width: 100%;
         height: 350px;
-        background-color: yellow;
         display: flex;
         flex-wrap: wrap;
         align-content: space-around;
@@ -703,27 +779,32 @@ button a {
         width: 23%;
         height: 270px;
     }
+    #goods .goodsbox .goods_txtbox p{
+        font-size: 16px;
+    }
+
+    #goods .goodsbox .goods_txtbox h3{
+        font-size: 22px;
+    }
+
+    #ex_img img {
+        width: 1000px;
+    }
 }
 
 @media (min-width: 1217px) {
     section {
         width: 1200px;
         margin: 0 auto;
-        background-color: #ccc;
     }
 
     #slider1 {
         width: 100%;
-        background-color: pink;
     }
 
     #character {
         width: 100%;
         height: auto;
-    }
-
-    #episode h1 {
-        width: 1200px;
     }
 
     #video {
@@ -735,7 +816,6 @@ button a {
     #goods {
         width: 1200px;
         margin: 0 auto;
-        background-color: #ccc;
     }
     
 }

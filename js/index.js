@@ -39,4 +39,3 @@ $(function () {
         $(".video_1>button").fadeOut();
     });
 });
-    

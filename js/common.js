@@ -46,9 +46,5 @@ $(function (){
         $('#g_sub').slideToggle();
     });
 });
-$(function (){
-    $('#m_nav').click(function () {
-        $('#m_sub').slideToggle();
-    });
-});
+
 
