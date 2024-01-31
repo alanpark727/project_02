@@ -286,6 +286,7 @@ section>h1{
     background-position: center;
     background-size: cover;
     opacity: 0.9;
+    border: none;
 }
 .play_btn:hover {
     opacity: 0.4;
@@ -349,9 +350,34 @@ section>h1{
     display: block;
 }
 
+#bg_img_wrap {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gif_img {
+    width: 35vw;
+    position: relative;
+}
+
 .chc_ani {
     width: 10vw;
     position: relative;
+}
+
+.usg_1 {
+    right: 35%;
+    animation: chc_animation_rot 1s infinite alternate ease-in-out;
+}
+
+.r_ani {
+    right: -30%;
+}
+
+.mmg_1 {
+    left: 80%;
+    animation: chc_animation_rot 1s infinite alternate ease-in-out;
 }
 
 .hat_1 {
@@ -399,11 +425,11 @@ section>h1{
     }
 }
 
-button {
+#morebtn {
     width: 300px;
     height: 60px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 15vw;
     border: none;
     border-radius: 20px;
     font-size: 16px;
@@ -423,12 +449,74 @@ button a {
     width: 100%;
 }
 
+#bd_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+#bd_wrap h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 36px;
+    margin: 50px 0px;
+}
+
+#bd_wrap .dir_btn {
+    position: relative;
+    width: 4vw;
+    height: 4vw;
+    border: none;
+    border-radius: 50%;
+    font-size: 2vw;
+    left: -10%;
+    top: 20vw;
+    cursor: pointer;
+    background-color: #ff96d2;
+    color: #fff;
+}
+
+.yor_1 {
+    width: 30%;
+    height: 100%;
+}
+.kuri_1 {
+    width: 10vw;
+    position: relative;
+    height: 100%;
+    left: -10%;
+}
+#bd_wrap .bd_case {
+    position: relative;
+    width: 30vw;
+    left: -10%;
+    margin-bottom: 20vw;
+    border: 1vw solid #fff;
+    padding-bottom: 1vw;
+    background-color: #fff;
+}
+
+.bd_case img{
+    width: 100%;
+}
+
+.bd_case p {
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
 /* 미디어쿼리 */
 
 @media (max-width: 592px) {
     section {
         width: 100%;
-        height: 350vw;
+        height: 380vw;
         margin: 0 auto;
     }
     
@@ -447,7 +535,7 @@ button a {
 
     #slider2{
         width: 100%;
-        height: 85vw;
+        height: 100vw;
     }
 
     .s2_thumnail {
@@ -464,7 +552,7 @@ button a {
 
     #news .artbox {
         width: 100%;
-        height: 340vw;
+        height: 360vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -480,11 +568,12 @@ button a {
 
     #episode h1 {
         width: 100%;
+        margin-top: 20vw;
     }
 
     #video {
         width: 100%;
-        height: 220vw;
+        height: 230vw;
         margin: 0 auto;
     }
 
@@ -510,13 +599,13 @@ button a {
 
     #goods {
         width: 100%;
-        height: 380vw;
+        height: 410vw;
         margin: 0 auto;
     }
 
     #goods .goodsbox {
         width: 100%;
-        height: 370vw;
+        height: 390vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -535,6 +624,42 @@ button a {
 
     #goods .goodsbox .goods_txtbox h3{
         font-size: 7vw;
+    }
+
+    #bd_wrap .bd_case {
+        position: relative;
+        width: 45vw;
+        left: -10%;
+        margin-bottom: 20vw;
+        border: 1vw solid #fff;
+        padding-bottom: 1vw;
+        background-color: #fff;
+    }
+
+    #bd_wrap .dir_btn {
+        position: relative;
+        width: 5vw;
+        height: 5vw;
+        border: none;
+        border-radius: 50%;
+        font-size: 3vw;
+        left: -10%;
+        top: 25vw;
+        cursor: pointer;
+        background-color: #ff96d2;
+        color: #fff;
+    }
+    
+    .bd_case img{
+        width: 100%;
+    }
+    
+    .bd_case p {
+        font-family: 'TmoneyRoundWindExtraBold';
+        font-size: 4vw;
+        line-height: 5vw;
+        text-align: center;
+        margin-top: 1vw;
     }
 }
 
@@ -559,7 +684,7 @@ button a {
 
     #slider2{
         width: 100%;
-        height: 85vw;
+        height: 100vw;
     }
 
     .s2_thumnail {
@@ -587,13 +712,18 @@ button a {
         background-color: #333;
     }
 
+    #episode {
+        margin-top: 10vw;
+        margin-bottom: -5vw;
+    }
+
     #episode h1 {
         width: 100%;
     }
 
     #video {
         width: 100%;
-        height: 220vw;
+        height: 230vw;
         margin: 0 auto;
     }
 
@@ -622,6 +752,10 @@ button a {
         margin: 0 auto;
     }
 
+    #goods>h5 {
+        margin-bottom: 5vw;
+    }
+
     #goods .goodsbox {
         width: 100%;
         height: 100vw;
@@ -640,6 +774,28 @@ button a {
 
     #goods .goodsbox .goods_txtbox h3{
         font-size: 3.5vw;
+    }
+
+    #bd_wrap .bd_case {
+        position: relative;
+        width: 45vw;
+        left: -10%;
+        margin-bottom: 20vw;
+        border: 1vw solid #fff;
+        padding-bottom: 1vw;
+        background-color: #fff;
+    }
+    
+    .bd_case img{
+        width: 100%;
+    }
+    
+    .bd_case p {
+        font-family: 'TmoneyRoundWindExtraBold';
+        font-size: 4vw;
+        line-height: 5vw;
+        text-align: center;
+        margin-top: 1vw;
     }
 }
 
@@ -697,7 +853,7 @@ button a {
         left: 50%;
         top: 44%;
         transform: translate(-50%,-50%);
-        width: 100vw;
+        width: 100%;
     }
     .s1_thumnail {
         display: flex;
@@ -706,6 +862,41 @@ button a {
     #slider2{
         width: 100%;
         height: 600px;
+    }
+    #bd_wrap .bd_case {
+        position: relative;
+        width: 30vw;
+        left: -10%;
+        margin-bottom: 20vw;
+        border: 1vw solid #fff;
+        padding-bottom: 1vw;
+        background-color: #fff;
+    }
+
+    #bd_wrap .dir_btn {
+        position: relative;
+        width: 4vw;
+        height: 4vw;
+        border: none;
+        border-radius: 50%;
+        font-size: 2vw;
+        left: -10%;
+        top: 20vw;
+        cursor: pointer;
+        background-color: #ff96d2;
+        color: #fff;
+    }
+    
+    .bd_case img{
+        width: 100%;
+    }
+    
+    .bd_case p {
+        font-family: 'TmoneyRoundWindExtraBold';
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        margin-top: 20px;
     }
 
 }
@@ -738,6 +929,11 @@ button a {
         background-color: #333;
     }
 
+    #episode {
+        margin-top: 10vw;
+        margin-bottom: 50px;
+    }
+
     #episode h1 {
         width: 100%;
     }
@@ -765,6 +961,10 @@ button a {
     #video .video_1 {
         width: 36%;
         order: 2;
+    }
+
+    #goods>h5 {
+        margin-bottom: 50px;
     }
 
     #goods .goodsbox {
