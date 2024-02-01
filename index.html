@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/54be9efe2e.js" crossorigin="anonymous"></script>
@@ -69,11 +70,11 @@
                             <li><a href="">FAQ</a></li>
                         </ul>
                     </li>
-                    <div id="small_icon">
+                    <li id="small_icon">
                         <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                         <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                         <a href="#"><i class="fa-solid fa-user"></i></a>
-                    </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -91,36 +92,40 @@
         </div>
         <script src="js/index_slider_1.js"></script>
         <div id="bg_img_wrap">
-        <img src="img/chi_ha.gif" alt="chiikawa_hachiware" class="gif_img">
-        <img src="img/rakko_1.gif" alt="rakko_ani" class="gif_img r_ani">
-        <img src="img/usagi.png" alt="usagi_jump" class="chc_ani usg_1">
+            <img src="img/chi_ha.gif" alt="chiikawa_hachiware" class="gif_img">
+            <img src="img/rakko_1.gif" alt="rakko_ani" class="gif_img r_ani">
+            <img src="img/usagi.png" alt="usagi_jump" class="usg_1">
+            <img src="img/tree.png" alt="tree" class="usg_tree">
+            <img src="img/mushroom_1.png" alt="mush_1" class="mush_1">
+            <img src="img/mushroom_2.png" alt="mush_2" class="mush_2">
         </div>
         <section id="news">
-            <h1>소식 / 정보</h1>
+            <h2>소식 / 정보</h2>
             <h5>NEWS</h5>
             <div class="artbox">
                 <article id="art_01">
                     <img src="img/news_01.jpg" alt="art_01">
-                    <p>라인 스탬프 제 2탄 무료배포!
+                    <h4>라인 스탬프 제 2탄 무료배포!
                         <br>2023.11.21~2024.2.12
-                    </p>
+                    </h4>
                 </article>
                 <article id="art_02">
                     <img src="img/news_02.jpg" alt="art_02">
-                    <p>WEB샵. 치이카와 마켓</p>
+                    <h4>WEB샵. 치이카와 마켓</h4>
                 </article>
                 <article id="art_03">
                     <img src="img/news_04.jpg" alt="art_03">
-                    <p>치이카와랜드(영업점) 오픈소식</p>
+                    <h4>치이카와랜드(영업점) 오픈소식</h4>
                 </article>
                 <article id="art_04">
                     <img src="img/news_06.jpg" alt="art_04">
-                    <p>치이카와 카페, 전국에 기간한정 카페 오픈</p>
+                    <h4>치이카와 카페, 전국에 기간한정 카페 오픈</h4>
                 </article>
             </div>
+            <button class="news_btn">+ 더 보기</button>
         </section>
         <div id="character">
-            <h1>캐릭터 소개</h1>
+            <h2>캐릭터 소개</h2>
             <h5>ABOUT CHARACTERS</h5>
         </div>
         <div id="slider2">
@@ -136,11 +141,10 @@
         </div>
         <script src="js/index_slider_2.js"></script>
         <div id="episode">
-            <h1>이야기</h1>
+            <h2>이야기</h2>
             <h5>EPISODES</h5>
         </div>
         <div id="video">
-            <!-- <div id="decobox"></div> -->
             <div class="video_wrap">
                 <div class="video_1">
                     <video src="video/chiikawa_pv.mp4" id="chiikawa_pv" poster="img/eye_catch.gif"
@@ -148,16 +152,14 @@
                     <button class="play_btn"></button>
                 </div>
                 <div class="video_2 vFrame">
-                    <iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/kzAfNg6pAvI?list=PLsmaUhkCwW3q5q46uc9So2b4D-pZqVZOV"
-                        title="[전편공개]먼작귀(먼가 작고 귀여운 녀석) 1화_단단한 푸딩, 핫케이크" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/kzAfNg6pAvI?list=PLsmaUhkCwW3q5q46uc9So2b4D-pZqVZOV"
+                        title="[전편공개]먼작귀(먼가 작고 귀여운 녀석) 1화_단단한 푸딩, 핫케이크"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
                 <div class="video_3 vFrame">
-                    <iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/XOFewWJQ_34?list=PLsmaUhkCwW3q2CHL1QXMcelAYZ_EKuX8X"
-                        title="단단한 푸딩_먼작귀 1화_먼가작고귀여운녀석_#shorts" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/XOFewWJQ_34?list=PLsmaUhkCwW3q2CHL1QXMcelAYZ_EKuX8X"
+                        title="단단한 푸딩_먼작귀 1화_먼가작고귀여운녀석_#shorts"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
@@ -165,7 +167,7 @@
         </div>
         <img src="img/momonga.png" alt="momonga_fly" class="chc_ani mmg_1">
         <div id="goods">
-            <h1>굿즈</h1>
+            <h2>굿즈</h2>
             <h5>GOODS</h5>
             <div class="goodsbox">
                 <article id="goods_01">
@@ -199,15 +201,19 @@
             </div>
         </div>
         <img src="img/ha.png" alt="" class="chc_ani hat_1">
-        <button id="morebtn"><a href="#">더 많은 상품보기</a></button>
+        <img src="img/cave.png" alt="cave" class="cave_1">
+        <a href="#" id="morebtn">더 많은 상품보기</a>
         <div id="bd_wrap">
-            <h1>BD & DVD</h1>
+            <h2>BD & DVD</h2>
+            <h5>BD & DVD</h5>
             <img src="img/yoroi.gif" alt="yor_ani" class="yor_1">
             <button class="dir_btn fa-solid fa-angle-left"></button>
             <div class="bd_case"><img src="img/bd_01.png" alt="bd"><p>먼작귀<br>영상판 1<br>특전피규어 동봉</p></div>
             <button class="dir_btn fa-solid fa-angle-right"></button>
             <img src="img/kuri.gif" alt="kuri_ani" class="kuri_1">
+            <img src="img/chi_2.png" alt="side_chiikawa" class="chi_2">
         </div>
+
         <div id="ex_img">
             <img src="img/footer_chiikawa.gif" alt="animate_img">
         </div>

@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sub_2.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/54be9efe2e.js" crossorigin="anonymous"></script>
@@ -21,48 +22,62 @@
 <body>
     <header>
         <div class="small">
-            <div class="logo"><img src="img/logo.png" alt=""></div>
+            <div class="logo"><a href="index.html"><img src="img/logo_pink.png" alt=""></a></div>
             <div id="hamburger">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </div>
         </div>
-        <nav id="header_menu">
-            <ul>
-                <li><a href="#" id="h_nav">HOME</a>
-                    <ul class="header_sub_menu" id="h_sub">
-                        <li><a href="">Familysite</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" id="n_nav">NEWS</a>
-                    <ul class="header_sub_menu" id="n_sub">
-                        <li><a href="">행사소식</a></li>
-                        <li><a href="">공지사항</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" id="a_nav">ABOUT</a>
-                    <ul class="header_sub_menu" id="a_sub">
-                        <li><a href="">먼작귀는?</a></li>
-                        <li><a href="">캐릭터소개</a></li>
-                        <li><a href="">시놉시스</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" id="e_nav">EPISODE</a>
-                    <ul class="header_sub_menu" id="e_sub">
-                        <li><a href="">애니메이션</a></li>
-                        <li><a href="">BD & DVD</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" id="g_nav">GOODS</a>
-                    <ul class="header_sub_menu" id="g_sub">
-                        <li><a href="">굿즈</a></li>
-                        <li><a href="">고객지원</a></li>
-                        <li><a href="">FAQ</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <div class="upper_menu">
+            <nav id="icon_menu">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </nav>
+            <nav id="header_menu">
+                <ul>
+                    <li><a href="#" id="h_nav">HOME</a>
+                        <ul class="header_sub_menu" id="h_sub">
+                            <li><a href="">Familysite</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="n_nav">NEWS</a>
+                        <ul class="header_sub_menu" id="n_sub">
+                            <li><a href="">행사소식</a></li>
+                            <li><a href="">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="a_nav">ABOUT</a>
+                        <ul class="header_sub_menu" id="a_sub">
+                            <li><a href="">먼작귀는?</a></li>
+                            <li><a href="">캐릭터소개</a></li>
+                            <li><a href="">시놉시스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="e_nav">EPISODE</a>
+                        <ul class="header_sub_menu" id="e_sub">
+                            <li><a href="">애니메이션</a></li>
+                            <li><a href="">BD & DVD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="g_nav">GOODS</a>
+                        <ul class="header_sub_menu" id="g_sub">
+                            <li><a href="">굿즈</a></li>
+                            <li><a href="">고객지원</a></li>
+                            <li><a href="">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li id="small_icon">
+                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <div id="slider1"></div>
     <nav id="shop_menu"></nav>
@@ -102,6 +117,7 @@
             <a href=""><i class="fa-brands fa-github"></i></a>
         </div>
         <h4>©nagano/chiikawa committee ©Gray Parka Service</h4>
+        <a href="#"><img src="img/scrolltop.png" alt="scrolltop" id="scrolltop"></a>
     </footer>
 </body>
 </html>

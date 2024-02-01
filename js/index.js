@@ -1,12 +1,5 @@
-// $(function(){
-//     let pv = $('video').get(0);
-//     $(window).load(function(){
-//         pv.load;
-//     })
-//     $('.play_btn').on("click",function(){
-//         pv.play;
-//     })
-// })
+// Index Part (Index)
+// j-Query
 
 $(function () {
     $(window).scroll(function () {

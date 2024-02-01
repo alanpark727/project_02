@@ -86,7 +86,7 @@ section {
     margin: 0 auto;
 }
 
-section>h1{
+section>h2{
     text-align: center;
     font-family: 'TmoneyRoundWindExtraBold';
     font-size: 36px;
@@ -111,7 +111,8 @@ section>h1{
 #news .artbox article {
     width: 22.5%;
     height: 300px;
-    background-color: #333;
+    background-color: #fff;
+    border-radius: 10%;
     cursor: pointer;
 }
 
@@ -119,12 +120,28 @@ section>h1{
     width: 100%;
 }
 
-#news .artbox article p {
+#news .artbox article h4 {
     text-align: center;
     margin: 5px;
     padding: 10px;
     position: relative;
-    color: #fff;
+    color: #000;
+    font-family: 'NanumSquareRound';
+    font-size: 18px;
+    line-height: 32px;
+}
+
+#news .news_btn {
+    border: none;
+    width: 120px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    font-family: 'NanumSquareRound';
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 #character {
@@ -132,7 +149,7 @@ section>h1{
     height: auto;
 }
 
-#character h1 {
+#character h2 {
     width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -221,7 +238,7 @@ section>h1{
     width: 100%;
 }
 
-#episode h1 {
+#episode h2 {
     width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -260,12 +277,24 @@ section>h1{
     height: 300px;
     order: 1;
 }
+.video_2 > iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
 #video .video_3 {
     width: 28%;
     height: 300px;
     order: 3;
 }
+
+.video_3 > iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 #video .vFrame {
     border: 10px solid #ff96d2;
     border-radius: 10px;
@@ -308,9 +337,10 @@ section>h1{
 
 #goods .goodsbox img {
     width: 100%;
+    border-radius: 10%;
 }
 
-#goods h1 {
+#goods h2 {
     width: 100%;
     text-align: center;
     font-family: 'TmoneyRoundWindExtraBold';
@@ -335,6 +365,8 @@ section>h1{
     position: relative;
     top: -40%;
     display: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 #goods_01:hover >.goods_txtbox {
@@ -352,13 +384,21 @@ section>h1{
 
 #bg_img_wrap {
     width: 100%;
+    height: 45vw;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
+    top: -50px;
+    z-index: -1;
+}
+
+#bg_img_wrap>img {
+    position: absolute;
 }
 
 .gif_img {
-    width: 35vw;
-    position: relative;
+    width: 32vw;
+    top: 5%;
 }
 
 .chc_ani {
@@ -367,12 +407,32 @@ section>h1{
 }
 
 .usg_1 {
-    right: 35%;
+    width: 10vw;
+    top: 40%;
+    right: 50%;
     animation: chc_animation_rot 1s infinite alternate ease-in-out;
 }
 
+.usg_tree {
+    width: 12vw;
+    top: 70%;
+    left: 35%;
+}
+
+.mush_1 {
+    left: 55%;
+    top: 80%;
+    width: 7vw;
+}
+
+.mush_2 {
+    width: 5vw;
+    left: 8%;
+    top: 85%;
+}
+
 .r_ani {
-    right: -30%;
+    right: 0%;
 }
 
 .mmg_1 {
@@ -425,6 +485,20 @@ section>h1{
     }
 }
 
+.cave_1 {
+    position: absolute;
+    width: 28vw;
+    left: 0;
+    z-index: -1;
+}
+
+.chi_2 {
+    position: absolute;
+    right: 0%;
+    top: 40%;
+    width: 22vw;
+}
+
 #morebtn {
     width: 300px;
     height: 60px;
@@ -433,9 +507,11 @@ section>h1{
     border: none;
     border-radius: 20px;
     font-size: 16px;
+    line-height: 60px;
+    text-align: center;
     display: block;
-}
-button a {
+    font-family: 'NanumSquareRound';
+    background-color: #fff;
     text-decoration: none;
     color: #000;
 }
@@ -454,14 +530,21 @@ button a {
     justify-content: space-between;
     flex-wrap: wrap;
     height: auto;
+    position: relative;
 }
 
-#bd_wrap h1 {
+#bd_wrap h2 {
     width: 100%;
     text-align: center;
     font-family: 'TmoneyRoundWindExtraBold';
     font-size: 36px;
-    margin: 50px 0px;
+    margin: 30px 0px;
+}
+
+#bd_wrap h5 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5vw;
 }
 
 #bd_wrap .dir_btn {
@@ -496,6 +579,8 @@ button a {
     border: 1vw solid #fff;
     padding-bottom: 1vw;
     background-color: #fff;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .bd_case img{
@@ -529,7 +614,7 @@ button a {
         display: none;
     }
 
-    #character h1 {
+    #character h2 {
         width: 100%;
     }
 
@@ -552,21 +637,29 @@ button a {
 
     #news .artbox {
         width: 100%;
-        height: 360vw;
+        height: 370vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-content: space-around;
-        padding-bottom: 30px;
+        padding-bottom: 5vw;
     }
 
     #news .artbox article {
         width: 90%;
         height: 80vw;
-        background-color: #333;
     }
 
-    #episode h1 {
+    #news .artbox article p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #character {
+        margin-top: 30vw;
+    }
+
+    #episode h2 {
         width: 100%;
         margin-top: 20vw;
     }
@@ -678,7 +771,7 @@ button a {
         display: none;
     }
 
-    #character h1 {
+    #character h2 {
         width: 100%;
     }
 
@@ -709,7 +802,10 @@ button a {
     #news .artbox article {
         width: 43%;
         height: 43%;
-        background-color: #333;
+    }
+
+    #character {
+        margin-top: 18vw;
     }
 
     #episode {
@@ -717,7 +813,7 @@ button a {
         margin-bottom: -5vw;
     }
 
-    #episode h1 {
+    #episode h2 {
         width: 100%;
     }
 
@@ -837,32 +933,10 @@ button a {
         margin-top: 25px;
     }
 
-    #episode h1 {
+    #episode h2 {
         width: 100%;
     }
     
-}
-
-@media (min-width:910px) {
-    #slider1 {
-        width: 100%;
-        height: 600px;
-    }
-    #slider1 #s1_imgbox {
-        position: relative;
-        left: 50%;
-        top: 44%;
-        transform: translate(-50%,-50%);
-        width: 100%;
-    }
-    .s1_thumnail {
-        display: flex;
-    }
-
-    #slider2{
-        width: 100%;
-        height: 600px;
-    }
     #bd_wrap .bd_case {
         position: relative;
         width: 30vw;
@@ -894,9 +968,35 @@ button a {
     .bd_case p {
         font-family: 'TmoneyRoundWindExtraBold';
         font-size: 24px;
-        line-height: 30px;
+        line-height: 36px;
         text-align: center;
         margin-top: 20px;
+    }
+}
+
+@media (min-width:910px) {
+    #slider1 {
+        width: 100%;
+        height: 600px;
+    }
+    #slider1 #s1_imgbox {
+        position: relative;
+        left: 50%;
+        top: 44%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+    }
+    .s1_thumnail {
+        display: flex;
+    }
+
+    #character {
+        margin-top: 10vw;
+    }
+
+    #slider2{
+        width: 100%;
+        height: 600px;
     }
 
 }
@@ -926,7 +1026,6 @@ button a {
     #news .artbox article {
         width: 22.5%;
         height: 300px;
-        background-color: #333;
     }
 
     #episode {
@@ -934,7 +1033,7 @@ button a {
         margin-bottom: 50px;
     }
 
-    #episode h1 {
+    #episode h2 {
         width: 100%;
     }
 
