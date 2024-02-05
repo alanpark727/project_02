@@ -1,69 +1,181 @@
-let images1 = [
-    './img/banner_01.jpg',
-    './img/c_banner_02.png',
-    './img/c_banner_03.png',
-    './img/c_banner_04.png',
-    './img/c_banner_05.png'
-];
 
-function ImageSlider(parent, images1) {
-    let currentIndex = 0;
 
-    let Slider = {
-        parent: parent,
-        images: parent.querySelector('.s1_img'),
-        thumnail: parent.querySelector('.s1_thumnail'),
-        PreviousBtn: parent.querySelector('.s1_btn .previous'),
-        NextBtn: parent.querySelector('.s1_btn .next')
-    }
+        const slide = document.querySelector(".slideshow");
+        let slideWidth = slide.clientWidth;
 
-    Slider.images.innerHTML = images1.map((image, index) => {
-        return `<img src="${image}" alt="이미지${index}">`
-    }).join("");
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
 
-    let imageNode = Slider.images.querySelectorAll("img");
-    imageNode[currentIndex].classList.add("active");
+        let slideItems = document.querySelectorAll(".s_img");
 
-    Slider.thumnail.innerHTML = Slider.images.innerHTML;
+        const maxSlide = slideItems.length;
 
-    let thumnailNode = Slider.thumnail.querySelectorAll("img");
-    thumnailNode[currentIndex].classList.add("active");
+        let currSlide = 1;
 
-    thumnailNode.forEach((el, i) => {
-        el.addEventListener("click", function () {
-            Slider.thumnail.querySelector("img.active").classList.remove("active");
-            el.classList.add("active");
+        const pagination = document.querySelector(".slide_pagination");
 
-            imageNode[currentIndex].classList.remove("active");
-            currentIndex = i;
-            imageNode[currentIndex].classList.add("active")
+        for (let i = 0; i < maxSlide; i++) {
+            if (i === 0) pagination.innerHTML += `<li class="active">•</li>`;
+            else pagination.innerHTML += `<li>•</li>`;
+        }
+
+        const paginationItems = document.querySelectorAll(".slide_pagination > li");
+
+        const startSlide = slideItems[0];
+        const endSlide = slideItems[slideItems.length - 1];
+        const startElem = document.createElement("div");
+        const endElem = document.createElement("div");
+
+        endSlide.classList.forEach((c) => endElem.classList.add(c));
+        endElem.innerHTML = endSlide.innerHTML;
+
+        startSlide.classList.forEach((c) => startElem.classList.add(c));
+        startElem.innerHTML = startSlide.innerHTML;
+
+        slideItems[0].before(endElem);
+        slideItems[slideItems.length - 1].after(startElem);
+
+        slideItems = document.querySelectorAll(".s_img");
+
+        let offset = slideWidth * currSlide;
+        slideItems.forEach((i) => {
+            i.setAttribute("style", `left: ${-offset}px`);
         });
-    });
 
-            //왼쪽 버튼 클릭
-            Slider.PreviousBtn.addEventListener("click", function () {
-                imageNode[currentIndex].classList.remove("active");
-                currentIndex--;
+        function nextMove() {
+            currSlide++;
 
-                if (currentIndex < 0) currentIndex = images1.length - 1;
-                imageNode[currentIndex].classList.add("active");
+            if (currSlide <= maxSlide) {
 
-                //활성화 되는 이미지와 같은 썸네일에 active 활성화
-                Slider.thumnail.querySelector("img.active").classList.remove("active");
-                thumnailNode[currentIndex].classList.add("active");
+                const offset = slideWidth * currSlide;
 
+                slideItems.forEach((i) => {
+                    i.setAttribute("style", `left: ${-offset}px`);
+                });
+
+                paginationItems.forEach((i) => i.classList.remove("active"));
+                paginationItems[currSlide - 1].classList.add("active");
+                
+            } else {
+
+                currSlide = 0;
+                let offset = slideWidth * currSlide;
+                slideItems.forEach((i) => {
+                    i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
+                });
+                currSlide++;
+                offset = slideWidth * currSlide;
+
+                setTimeout(() => {
+                    slideItems.forEach((i) => {
+                        i.setAttribute("style", `transtion: ${0.15}s; left: ${-offset}px`);
+                    });
+                }, 0);
+                paginationItems.forEach((i) => i.classList.remove("active"));
+                paginationItems[currSlide -1].classList.add("active");
+            }
+        }
+
+        function prevMove() {
+            currSlide--;
+
+            if (currSlide > 0) {
+
+                const offset = slideWidth * currSlide;
+
+                slideItems.forEach((i) => {
+                    i.setAttribute("style", `left: ${-offset}px`);
+                });
+
+                paginationItems.forEach((i) => i.classList.remove("active"));
+                paginationItems[currSlide -1].classList.add("active");
+            } else {
+
+                currSlide = maxSlide + 1;
+                let offset = slideWidth * currSlide;
+
+                slideItems.forEach((i) => {
+                    i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
+                });
+                currSlide--;
+                offset = slideWidth * currSlide;
+                setTimeout(() => {
+                    slideItems.forEach((i) => {
+                        i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
+                    });
+                }, 0);
+                paginationItems.forEach((i) => i.classList.remove("active"));
+                paginationItems[currSlide -1].classList.add("active");
+            }
+        }
+
+        nextBtn.addEventListener("click", () => {
+            nextMove();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            prevMove();
+        });
+
+        window.addEventListener("resize", () => {
+            slideWidth = slide.clientWidth;
+        });
+
+        for (let i = 0; i < maxSlide; i++) {
+            paginationItems[i].addEventListener("click", () => {
+                currSlide = i + 1;
+
+                const offset = slideWidth * currSlide;
+
+                slideItems.forEach((i) => {
+                    i.setAttribute("style", `left: ${-offset}px`);
+                });
+
+                paginationItems.forEach((i) => i.classList.remove("active"));
+                paginationItems[currSlide -1].classList.add("active");
             });
+        }
 
-            //오른쪽 버튼 클릭
-            Slider.NextBtn.addEventListener("click", function () {
-                imageNode[currentIndex].classList.remove("active");
+        // 스와이프로 배너 슬라이드
 
-                currentIndex = (currentIndex + 1) % images1.length;
-                imageNode[currentIndex].classList.add("active");
+        let startPoint = 0;
+        let endPoint = 0;
 
-                //활성화 되는 이미지와 같은 썸네일에 active 활성화
-                Slider.thumnail.querySelector("img.active").classList.remove("active");
-                thumnailNode[currentIndex].classList.add("active");
-            });
-}
-ImageSlider(document.querySelector("#s1_imgbox"), images1);
+        slide.addEventListener("mousedown", (e) => {
+            startPoint = e.pageX;
+        });
+
+        slide.addEventListener("mouseup", (e) => {
+            endPoint = e.pageX;
+            if (startPoint < endPoint) {
+                prevMove();
+            } else if (startPoint > endPoint) {
+                nextMove();
+            }
+        });
+
+        slide.addEventListener("touchstart", (e) => {
+            startPoint = e.touches[0].pageX;
+        });
+        slide.addEventListener("touchend", (e) => {
+            endPoint = e.changedTouches[0].pageX;
+            if (startPoint < endPoint) {
+                prevMove();
+            } else if (startPoint > endPoint) {
+                nextMove();
+            }
+        });
+
+        // let loopInterval = setInterval(() => {
+        //     nextMove();
+        // }, 5000);
+
+        // slide.addEventListener("mouseover", () => {
+        //     clearInterval(loopInterval);
+        // });
+
+        // slide.addEventListener("mouseout", () => {
+        //     loopInterval = setInterval(() => {
+        //         nextMove();
+        //     }, 5000);
+        // });
