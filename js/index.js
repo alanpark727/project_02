@@ -26,9 +26,9 @@ $(function () {
         }
     });
     $(pv).mouseover(function(){
-        $(".video_1>button").fadeIn();
+        $(".video_1>button").stop().fadeIn();
     });
     $(pv).mouseout(function(){
-        $(".video_1>button").fadeOut();
+        $(".video_1>button").stop().fadeOut();
     });
 });

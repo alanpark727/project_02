@@ -35,6 +35,7 @@
     width: 550px;
     border: 2px solid #000;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .btn {
@@ -48,6 +49,12 @@
     background-color: #fff;
     cursor: pointer;
     color: #ff96d2;
+    opacity: 0.5;
+    transition: all 400ms ease-in-out;
+}
+
+.btn:hover {
+    opacity: 1;
 }
 
 .prev {
@@ -113,6 +120,8 @@
 .mini_ban h3 {
     text-align: center;
     padding: 2%;
+    line-height: 20px;
+    font-family: 'NanumSquareRound';
 }
 
 .mini_ban img {
@@ -231,7 +240,7 @@
     width: 22.5%;
     height: 375px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 15px;
     border: 2px solid #000;
 }
@@ -247,6 +256,10 @@
     border: 2px solid #000;
 }
 
+.goods_txtbox p, h3 {
+    font-family: 'NanumSquareRound';
+}
+
 
 #shop_item .itembox img {
     width: 100%;
@@ -254,7 +267,7 @@
     border-top-right-radius: 15px;
 }
 
-#morebtn {
+.morebtn {
     width: 300px;
     height: 60px;
     margin: 0 auto;
@@ -273,21 +286,31 @@
 @media (max-width: 592px) {
     #slider1 {
         width: 100%;
-        height: 120vw;
+        height: 110vw;
+    }
+
+    .s_img img {
+        width: 100%;
+        border: 2px solid #000;
+        border-radius: 20px;
     }
 
     .slide_pagination {
-        bottom: calc(30% - 12vw);
+        display: none;
     }
 
     #mini_banner {
         width: 100%;
-        height: 70vw;
+        height: 75vw;
         align-content: space-around;
     }
 
     #mini_banner .mini_ban {
-        width: 45%;
+        width: 44%;
+    }
+
+    .mini_ban h3 {
+        font-size: 3.5vw;
     }
 
     .shop_menu {
@@ -329,7 +352,7 @@
 
     #shop_item .itembox {
         width: 90%;
-        height: 120vw;
+        height: 125vw;
     }
 
     #shop_item .itembox .goods_txtbox p{
@@ -340,7 +363,7 @@
         font-size: 7vw;
     }
 
-    #morebtn {
+    .morebtn {
         margin-top: 10vw;
         margin-bottom: 20vw;
     }
@@ -353,7 +376,7 @@
     }
 
     .slide_pagination {
-        bottom: 22%
+        bottom: 20%
     }
 
     #mini_banner {
@@ -405,7 +428,7 @@
 
     #shop_item .itembox {
         width: 90%;
-        height: 121.5vw;
+        height: 125vw;
     }
 
     #shop_item .itembox .goods_txtbox p{
@@ -416,7 +439,7 @@
         font-size: 7vw;
     }
 
-    #morebtn {
+    .morebtn {
         margin-top: 10vw;
         margin-bottom: 20vw;
     }
@@ -473,7 +496,7 @@
 
     #shop_item .itembox {
         width: 43%;
-        height: 14.7%;
+        height: 59vw;
     }
 
     #shop_item .itembox .goods_txtbox p{
@@ -484,7 +507,7 @@
         font-size: 3.5vw;
     }
 
-    #morebtn {
+    .morebtn {
         margin-top: 8vw;
         margin-bottom: 15vw;
     }
@@ -541,7 +564,7 @@
 
     #shop_item .itembox {
         width: 22.5%;
-        height: 27%;
+        height: 27.5%;
     }
 
     #shop_item .itembox .goods_txtbox {
@@ -556,7 +579,7 @@
         font-size: 2.1vw;
     }
 
-    #morebtn {
+    .morebtn {
         margin-top: 5vw;
         margin-bottom: 5vw;
     }

@@ -121,6 +121,10 @@
             slideWidth = slide.clientWidth;
         });
 
+        window.addEventListener("load", () => {
+            slideWidth = slide.clientWidth;
+        })
+
         for (let i = 0; i < maxSlide; i++) {
             paginationItems[i].addEventListener("click", () => {
                 currSlide = i + 1;
@@ -166,16 +170,16 @@
             }
         });
 
-        // let loopInterval = setInterval(() => {
-        //     nextMove();
-        // }, 5000);
+        let loopInterval = setInterval(() => {
+            nextMove();
+        }, 4000);
 
-        // slide.addEventListener("mouseover", () => {
-        //     clearInterval(loopInterval);
-        // });
+        slide.addEventListener("mouseover", () => {
+            clearInterval(loopInterval);
+        });
 
-        // slide.addEventListener("mouseout", () => {
-        //     loopInterval = setInterval(() => {
-        //         nextMove();
-        //     }, 5000);
-        // });
+        slide.addEventListener("mouseout", () => {
+            loopInterval = setInterval(() => {
+                nextMove();
+            }, 4000);
+        });

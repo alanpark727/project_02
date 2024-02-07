@@ -66,12 +66,12 @@ a {
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
+    opacity: 0.5;
+    color: #ff96d2;
     transition: all 400ms ease-in-out;
 }
 .s1_btn a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 1;
 }
 .s1_btn a.next{
     right: 0;
@@ -220,12 +220,12 @@ section>h2{
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
+    opacity: 0.5;
+    color: #ff96d2;
     transition: all 400ms ease-in-out;
 }
 .s2_btn a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 1;
 }
 .s2_btn a.next{
     right: 0;
@@ -367,6 +367,10 @@ section>h2{
     display: none;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+.goods_txtbox p, h3 {
+    font-family: 'NanumSquareRound';
 }
 
 #goods_01:hover >.goods_txtbox {

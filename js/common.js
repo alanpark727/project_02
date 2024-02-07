@@ -47,4 +47,16 @@ $(function (){
     });
 });
 
+$(function(){
+    $("#header_menu ul>li a").click(function(e){
+        e.preventDefault();
+    });
+});
+
+$(function(){
+    $("#icon_menu").click(function(e){
+        e.preventDefault();
+    });
+});
+
 
