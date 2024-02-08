@@ -55,30 +55,67 @@
     width: 100%;
     height: 300px;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 0px;
 }
 
 #character_list .char_li {
     width: 19%;
-    height: 43%;
-    background-color: green;
+    height: 48%;
     background-image: url(../img/sub_1_img/chi_bg_yellow.png);
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-flow: column;
+    justify-content: end;
     align-items: center;
+    cursor: pointer;
+}
 
+#character_list .char_li p {
+    color: #462e31;
+    font-family: 'TmoneyRoundWindExtraBold';
 }
 
 #character_list li img {
-    max-width: 70%;
-    max-height: 90%;
+    max-width: 90%;
+    max-height: 80%;
+    align-self: center;
 }
 
+.hidden {
+    display: flex;
+    width: 600px;
+    height: 300px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 81%;
+    display: none;
+}
+
+.hidden li {
+    width: 19%;
+    height: 48%;
+    background-image: url(../img/sub_1_img/chi_bg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.hidden li p{
+    margin-top: 45px;
+    color: #fff;
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+}
+
+
+/* 배경 박스의 크기를 더 키워보기 + 이미지 크기 조절하기 */
 #story {
     display: flex;
     flex-wrap: wrap;
