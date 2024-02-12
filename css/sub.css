@@ -46,6 +46,11 @@
     display: none;
 }
 
+.cv_name {
+    display: flex;
+    justify-content: center;
+}
+
 .cv_name img {
     width: 20px;
 }
@@ -85,7 +90,7 @@
     align-self: center;
 }
 
-.hidden {
+.hidden_li {
     display: flex;
     width: 600px;
     height: 300px;
@@ -93,11 +98,11 @@
     justify-content: center;
     align-content: center;
     position: absolute;
-    top: 81%;
+    top: 77.5%;
     display: none;
 }
 
-.hidden li {
+.hidden_li li {
     width: 19%;
     height: 48%;
     background-image: url(../img/sub_1_img/chi_bg.png);
@@ -107,7 +112,7 @@
     cursor: pointer;
 }
 
-.hidden li p{
+.hidden_li li p{
     margin-top: 45px;
     color: #fff;
     text-align: center;
