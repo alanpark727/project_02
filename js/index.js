@@ -32,3 +32,12 @@ $(function () {
         $(".video_1>button").stop().fadeOut();
     });
 });
+
+$(function(){
+    $(".ep_01").click(function(){
+        $("#popup").fadeIn();
+    });
+    $("#cbtn").click(function(){
+        $("#popup").fadeOut();
+    });
+});

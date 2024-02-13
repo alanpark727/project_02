@@ -48,7 +48,19 @@ $(function (){
 });
 
 $(function(){
-    $("#header_menu ul>li a").click(function(e){
+    $("#h_nav").click(function(e){
+        e.preventDefault();
+    });
+    $("#n_nav").click(function(e){
+        e.preventDefault();
+    });
+    $("#a_nav").click(function(e){
+        e.preventDefault();
+    });
+    $("#e_nav").click(function(e){
+        e.preventDefault();
+    });
+    $("#g_nav").click(function(e){
         e.preventDefault();
     });
 });

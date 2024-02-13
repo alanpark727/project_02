@@ -93,7 +93,7 @@ header {
     background-color: #fff;
     left: 0;
     top: 0;
-    z-index: 5;
+    z-index: 6;
     opacity: 0.9;
     position: sticky;
 }
@@ -251,7 +251,7 @@ footer h4 {
 
 #scrolltop {
     position: fixed;
-    max-width: 40px;
+    max-width: 50px;
     left: 4%;
     top: 88%;
     display: none;
@@ -285,7 +285,7 @@ footer h4 {
 
     header #header_menu ul { 
         width: 100%;
-        height: 250px;
+        height: auto;
     }
 
     footer #ft_mail {
@@ -321,6 +321,10 @@ footer h4 {
     }
     footer #ft_menu li:last-of-type {
         border-bottom: 2px dotted #aaa;
+    }
+
+    #scrolltop {
+        max-width: 40px;
     }
 
 }
@@ -398,7 +402,7 @@ footer h4 {
 
     header #header_menu ul { 
         width: 100%;
-        height: 250px;
+        height: auto;
     }
 
     #icon_menu {

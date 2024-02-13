@@ -1,32 +1,87 @@
 @charset "utf-8";
 
+
+#wrap {
+    width: 100%;
+    background-color: #d3ecbf;
+}
+
+#about {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+#about h2 {
+    width: 100%;
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 36px;
+}
+
+#about h5 {
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+.about_txt {
+    width: 36%;
+}
+
+#about p {
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 24px;
+    padding-bottom: 50px;
+    color: #462e31;
+}
+
 #character {
     display: flex;
     flex-wrap: wrap;
     width: 1200px;
     height: auto;
     margin: 0 auto;
-    background-color: #ddd;
+    padding-top: 50px;
 }
-
 
 #character h2 {
     width: 100%;
-    background-color: gold;
     text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 36px;
+}
+
+#character h5 {
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    width: 100%;
 }
 
 #character .imgpart {
-    width: 600px;
-    height: 900px;
+    width: 50%;
+    height: 1000px;
     margin: 0 auto;
-    background-color: bisque;
+    padding-top: 50px;
 }
 
 #character #character_info {
     width: 100%;
     height: 600px;
     position: relative;
+    background-image: url(../img/sub_1_img/char_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
 }
 
 #character_info .charbox {
@@ -37,13 +92,26 @@
     text-align: center;
 }
 
+
 #character_info .charbox span img {
     height: 100%;
     max-width: 100%;
+    padding-bottom: 30px;
 }
 
 #character_info .charbox:not(:first-child) {
     display: none;
+}
+
+#character_info .charbox>p{
+    padding: 10px 0px;
+    font-family: 'TmoneyRoundWindExtraBold';
+    color: #462e31;
+}
+
+.name {
+    font-size: 36px;
+    padding-top: 30px;
 }
 
 .cv_name {
@@ -62,7 +130,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    padding-top: 50px;
     padding-bottom: 0px;
+    position: relative;
 }
 
 #character_list .char_li {
@@ -82,68 +152,133 @@
 #character_list .char_li p {
     color: #462e31;
     font-family: 'TmoneyRoundWindExtraBold';
+    text-align: center;
 }
 
 #character_list li img {
-    max-width: 90%;
+    max-width: 70%;
     max-height: 80%;
     align-self: center;
 }
 
-.hidden_li {
-    display: flex;
-    width: 600px;
-    height: 300px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    position: absolute;
-    top: 77.5%;
+#character_list .active {
+    background-image: url(../img/sub_1_img/chi_bg.png);
+    animation: rotateChar 0.25s 2 linear;
+}
+#character_list .active>img {
     display: none;
 }
-
-.hidden_li li {
-    width: 19%;
-    height: 48%;
-    background-image: url(../img/sub_1_img/chi_bg.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor: pointer;
+#character_list .active>p {
+    color: #fff;
+    position: relative;
+    top: -40%;
 }
 
-.hidden_li li p{
-    margin-top: 45px;
-    color: #fff;
-    text-align: center;
-    font-family: 'TmoneyRoundWindExtraBold';
+@keyframes rotateChar {
+    from {
+        transform: rotateY(0);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
 }
 
 
 /* 배경 박스의 크기를 더 키워보기 + 이미지 크기 조절하기 */
-#story {
+#synopsis {
     display: flex;
     flex-wrap: wrap;
     width: 1200px;
-    height: 1320px;
+    height: auto;
     margin: 0 auto;
-    background-color: skyblue;
     align-content: space-around;
 }
 
-#story h1 {
+#synopsis h2 {
     width: 100%;
-    height: 90px;
-    background-color: gold;
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 36px;
+    padding-top: 30px;
 }
 
-#story .story_img {
+#synopsis h5 {
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+#synopsis .story_img {
     width: 50%;
     background-color: lightsalmon;
 }
 
-#story .story_text {
+#synopsis .story_text {
     width: 50%;
     height: 570px;
     background-color: yellowgreen;
+}
+
+@media (max-width: 592px){
+    #wrap {
+        width: 100%;
+    }
+
+    #character {
+        width: 100%;
+    }
+
+    #character .imgpart {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    #character_info {
+        width: 100%;
+    }
+
+    .charbox {
+        width: 60%;
+    }
+
+    .charbox span>img {
+        height: 100%;
+    }
+
+    #character_list {
+        width: 100%;
+    }
+
+    #character_list p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width:593px){
+    #wrap {
+        width: 100%;
+    }
+
+    #character {
+        width: 100%;
+    }
+
+    #character .imgpart {
+        width: 100%;
+    }
+
+    #character_info {
+        width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 617px) {
+    #character .imgpart {
+        width: 600px;
+        margin-top: 50px;
+    }
+
 }
