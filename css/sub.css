@@ -15,6 +15,9 @@
     height: auto;
     margin: 0 auto;
     padding-top: 50px;
+    background-image: url(../img/sub_1_img/bg.png);
+    background-position: center;
+    background-size: auto;
 }
 
 #about h2 {
@@ -189,7 +192,7 @@
 #synopsis {
     display: flex;
     flex-wrap: wrap;
-    width: 1200px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     align-content: space-around;
@@ -210,19 +213,150 @@
     padding-bottom: 50px;
 }
 
-#synopsis .story_img {
-    width: 50%;
-    background-color: lightsalmon;
+.epi_wrap {
+    background-image: url(../img/sub_1_img/bg.png);
+    background-position: center;
+    background-size: auto;
 }
 
-#synopsis .story_text {
-    width: 50%;
-    height: 570px;
-    background-color: yellowgreen;
+.epi_list {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 50px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    position: relative;
+}
+
+.epi_list li {
+    width: 45%;
+}
+
+.epi_list .epi_num {
+    background: url(../img/sub_1_img/ic_epi_01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-45%, -45%);
+    font-family: 'NanumSquareRound';
+    color: #ff96d2;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+
+.epi_list li p {
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.epi_list li img {
+    width: 100%;
+}
+
+.page_list {
+    display: flex;
+    justify-content: space-around;
+    width: 450px;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.page_list a {
+    text-decoration: none;
+}
+
+.page_list .prev {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 26px;
+    background-image: url(../img/sub_1_img/chi_bg_pink.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.page_list .next {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 26px;
+    background-image: url(../img/sub_1_img/chi_bg_pink.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.page_list .list_num {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'TmoneyRoundWindExtraBold';
+}
+
+.page_list .list_num a {
+    color: #462e31;
+}
+
+.page_list .list_num.active {
+    background-image: url(../img/sub_1_img/ic_epi_02.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.page_list .list_num.active a {
+    color: #fff;
+}
+
+.page_list .next a, .prev a {
+    color: #fff;
+}
+
+.epi_btn {
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    font-family: 'TmoneyRoundWindExtraBold';
+    background-color: #462e31;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
 }
 
 @media (max-width: 592px){
     #wrap {
+        width: 100%;
+    }
+
+    #about {
+        width: 100%;
+    }
+
+    #about .about_txt {
         width: 100%;
     }
 
@@ -254,10 +388,68 @@
     #character_list p {
         font-size: 14px;
     }
+
+    .epi_list {
+        width: 90%;
+        margin-top: 50px;
+    }
+    
+    .epi_list li {
+        width: 45%;
+    }
+
+    .epi_list li p {
+        font-size: 16px;
+    }
+
+    .page_list {
+        width: 70%;
+        margin-top: 50px;
+        margin-bottom: 8vw;
+    }
+
+    .page_list .prev {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+    }
+    
+    .page_list .next {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+    }
+    
+    .page_list .list_num {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+    }
+
+    .epi_btn {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        border-radius: 15px;
+        margin-top: 2vw;
+        margin-bottom: 10vw;
+    }
 }
 
 @media (min-width:593px){
     #wrap {
+        width: 100%;
+    }
+
+    #about {
+        width: 100%;
+    }
+
+    #about .about_txt {
         width: 100%;
     }
 
@@ -273,6 +465,29 @@
         width: 600px;
         margin: 0 auto;
     }
+
+    .epi_list {
+        width: 90%;
+        margin-top: 50px;
+    }
+    
+    .epi_list li {
+        width: 45%;
+    }
+
+    .epi_list li p {
+        font-size: 18px;
+    }
+
+    .epi_btn {
+        width: 300px;
+        height: 60px;
+        font-size: 20px;
+        line-height: 60px;
+        border-radius: 20px;
+        margin-top: 10vw;
+        margin-bottom: 15vw;
+    }
 }
 
 @media (min-width: 617px) {
@@ -281,4 +496,30 @@
         margin-top: 50px;
     }
 
+}
+
+@media (min-width: 785px) {
+    .epi_list {
+        width: 600px;
+        margin-top: 50px;
+    }
+    
+    .epi_list li {
+        width: 45%;
+    }
+
+    .epi_list li p {
+        font-size: 20px;
+    }
+
+    .epi_btn {
+        margin-top: 7vw;
+        margin-bottom: 10vw;
+    }
+}
+@media (min-width: 1009px) {
+    .epi_btn {
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
 }

@@ -1,3 +1,6 @@
+// Sub_page_01 Part
+// j-Query
+
 $(function () {
 
     $(window).scroll(function () {
@@ -18,5 +21,15 @@ $(function () {
 
         $(charBox).eq(idx).fadeIn().siblings().hide();
         $(this).addClass("active").siblings().removeClass("active");
+    });
+
+    $(".list_num").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+    $(".list_num a").click(function(e){
+        e.preventDefault();
+    });
+    $(".prev, .next").click(function(e){
+        e.preventDefault();
     });
 });

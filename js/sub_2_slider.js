@@ -1,4 +1,5 @@
-
+// Sub_page_02_slider Part
+// j-Query
 
         const slide = document.querySelector(".slideshow");
         let slideWidth = slide.clientWidth;

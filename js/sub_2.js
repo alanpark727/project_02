@@ -1,3 +1,6 @@
+// Sub_page_02 Part
+// j-Query
+
 $(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {

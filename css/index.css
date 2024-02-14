@@ -16,6 +16,7 @@ a {
     transform: translate(-50%,-50%);
     width: 100%;
     height: 500px;
+    cursor: pointer;
 }
 .s1_img {
     position: relative;
@@ -132,16 +133,21 @@ section>h2{
 }
 
 #news .news_btn {
-    border: none;
-    width: 120px;
-    height: 30px;
-    display: block;
+    width: 300px;
+    height: 60px;
     margin: 0 auto;
-    font-family: 'NanumSquareRound';
-    font-size: 14px;
+    margin-bottom: 15vw;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    font-family: 'TmoneyRoundWindExtraBold';
+    background-color: #462e31;
+    text-decoration: none;
+    color: #fff;
     cursor: pointer;
-    border-radius: 10px;
-    background-color: #fff;
 }
 
 #character {
@@ -158,80 +164,57 @@ section>h2{
     margin: 30px 0px;
 }
 
-#slider2 {
+#char_info {
     width: 100%;
-    height: 600px;
-}
-/* 슬라이더 슬라이드이미지 */
-#slider2 #s2_imgbox {
-    position: relative;
-    left: 50%;
-    top: 44%;
-    transform: translate(-50%,-50%);
-    width: 100%;
-    height: 500px;
-}
-.s2_img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.s2_img img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0;
-    transform: scale(1.2);
-    transition: all 600ms ease-in-out;
-}
-.s2_img img.active {
-    opacity: 1;
-    transform: scale(1);
 }
 
-.s2_thumnail {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,240px);
-    width: 100px;
-    height: 60px;
+#char_info .char_li {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 25px;
-}
-.s2_thumnail img{
-    cursor: pointer;
-    border: 3px solid transparent;
-}
-.s2_thumnail img.active {
-    border: 3px solid #fff;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
-.s2_btn a {
-    position: absolute;
-    top: 250px;
-    width: 50px;
-    height: 50px;
+.char_li li {
     display: flex;
-    justify-content: center;
+    flex-flow: column wrap;
+    justify-content: space-between;
     align-items: center;
-    font-size: 30px;
-    opacity: 0.5;
+    width: 28%;
+}
+
+.char_li img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.char_li li p {
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 22px;
     color: #ff96d2;
-    transition: all 400ms ease-in-out;
+    border-radius: 25px;
+    background-color: #fff578;
 }
-.s2_btn a:hover {
-    opacity: 1;
-}
-.s2_btn a.next{
-    right: 0;
-}
-.s2_btn a.previous {
-    left: 0;
+
+#char_info a {
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    font-family: 'TmoneyRoundWindExtraBold';
+    background-color: #462e31;
+    text-decoration: none;
+    color: #fff;
 }
 
 #episode {
@@ -277,8 +260,6 @@ section>h2{
     height: 300px;
     order: 1;
 }
-
-
 
 .video_2 > iframe {
     width: 100%;
@@ -513,14 +494,14 @@ section>h2{
     margin-bottom: 15vw;
     border: none;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 60px;
     text-align: center;
     display: block;
-    font-family: 'NanumSquareRound';
-    background-color: #fff;
+    font-family: 'TmoneyRoundWindExtraBold';
+    background-color: #462e31;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 #ex_img {
@@ -625,23 +606,6 @@ section>h2{
         width: 100%;
     }
 
-    #slider2{
-        width: 100%;
-        height: 100vw;
-    }
-
-    .s2_thumnail {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,32vw);
-        width: 100px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-
     #news .artbox {
         width: 100%;
         height: 370vw;
@@ -657,13 +621,45 @@ section>h2{
         height: 80vw;
     }
 
+    #news .artbox article h4 {
+        font-size: 3.5vw;
+        padding: 0px;
+    }
+
     #news .artbox article p {
         font-size: 16px;
         line-height: 24px;
     }
 
+    #news .news_btn {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        border-radius: 15px;
+        margin-top: 2vw;
+        margin-bottom: 10vw;
+    }
+
     #character {
         margin-top: 30vw;
+    }
+
+    .char_li li p {
+        width: 90%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    #char_info a {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        border-radius: 15px;
+        margin-top: 6vw;
+        margin-bottom: 10vw;
     }
 
     #episode h2 {
@@ -782,23 +778,6 @@ section>h2{
         width: 100%;
     }
 
-    #slider2{
-        width: 100%;
-        height: 100vw;
-    }
-
-    .s2_thumnail {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,32vw);
-        width: 100px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-
     #news .artbox {
         width: 100%;
         height: 110vw;
@@ -811,8 +790,35 @@ section>h2{
         height: 43%;
     }
 
+    #news .news_btn {
+        width: 300px;
+        height: 60px;
+        font-size: 20px;
+        line-height: 60px;
+        border-radius: 20px;
+        margin-top: 5vw;
+        margin-bottom: 15vw;
+    }
+
     #character {
         margin-top: 18vw;
+    }
+
+    .char_li li p {
+        width: 90%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 22px;
+    }
+
+    #char_info a {
+        width: 300px;
+        height: 60px;
+        font-size: 20px;
+        line-height: 60px;
+        border-radius: 20px;
+        margin-top: 7vw;
+        margin-bottom: 15vw;
     }
 
     #episode {
@@ -922,24 +928,6 @@ section>h2{
         height: auto;
     }
 
-    #slider2{
-        width: 100%;
-        height: 600px;
-    }
-
-    .s2_thumnail {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,240px);
-        width: 100px;
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 25px;
-    }
-
     #episode h2 {
         width: 100%;
     }
@@ -1001,11 +989,6 @@ section>h2{
         margin-top: 10vw;
     }
 
-    #slider2{
-        width: 100%;
-        height: 600px;
-    }
-
 }
 
 @media (min-width: 1009px) {
@@ -1020,6 +1003,16 @@ section>h2{
     #character {
         width: 100%;
         height: auto;
+    }
+
+    #char_info {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    #char_info a {
+        margin-top: 80px;
+        margin-bottom: 200px;
     }
 
     #news .artbox {

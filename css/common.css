@@ -200,7 +200,7 @@ footer {
 
 footer #ft_mail {
     margin: 40px;
-    background-image: url(../img/ft_mail_btn.png);
+    background-image: url(../img/ft_mail_btn\(kor\).png);
     background-position: center;
     background-size: cover;
     width: 420px;
@@ -326,7 +326,6 @@ footer h4 {
     #scrolltop {
         max-width: 40px;
     }
-
 }
 
 @media (min-width: 593px) {
