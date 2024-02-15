@@ -232,8 +232,15 @@ section>h2{
 
 #video {
     width: 100%;
-    height: 400px;
+    height: 300px;
     display: flex;
+    position: relative;
+}
+
+#video .title {
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-size: 24px;
+    color: #462e31;
 }
 
 #video .video_wrap {
@@ -245,54 +252,56 @@ section>h2{
 }
 
 #video .video_1 {
-    width: 36%;
-    height: 300px;
+    width: 30%;
     order: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     top: -20px;
 }
 
-#video .video_2 {
-    width: 28%;
-    height: 300px;
-    order: 1;
+.video_1 img {
+    width: 100%;
 }
 
-.video_2 > iframe {
+#video .video_2 {
+    width: 30%;
+    height: 300px;
+    order: 1;
+    position: relative;
+}
+
+.video_2 img {
     width: 100%;
-    height: 100%;
-    border: none;
 }
 
 #video .video_3 {
-    width: 28%;
+    width: 30%;
     height: 300px;
     order: 3;
+    position: relative;
 }
 
-.video_3 > iframe {
+.video_3 img {
     width: 100%;
-    height: 100%;
-    border: none;
 }
 
 #video .vFrame {
-    border: 10px solid #ff96d2;
+    border: 15px solid #fff578;
     border-radius: 10px;
-    box-shadow: 3px 3px 6px #333;
+    box-shadow: 2px 2px 6px #ff96d2;
+    background-color: #fff578;
 }
 
 .video_1 video {
     width: 100%;
 }
 
-.play_btn {
+#play_btn {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     border-radius: 50%;
     background-image: url(../img/play_pause.png);
@@ -301,8 +310,120 @@ section>h2{
     opacity: 0.9;
     border: none;
 }
-.play_btn:hover {
+
+#play_btn:hover {
     opacity: 0.4;
+}
+
+#tbtn:hover {
+    opacity: 0.4;
+}
+
+#tbtn_2:hover {
+    opacity: 0.4;
+}
+
+#tbtn {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0.9;
+    border: none;
+}
+
+#tbtn_2 {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0.9;
+    border: none;
+}
+
+
+#popUp {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 10;
+}
+
+#vBox {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#popUp_2 {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 10;
+}
+
+#vBox_2 {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.cbtn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    top: 20%;
+    left: 70%;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#popUp_3 {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 10;
+}
+
+#vBox_3 {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 #goods {
@@ -658,8 +779,8 @@ section>h2{
         font-size: 16px;
         line-height: 40px;
         border-radius: 15px;
-        margin-top: 6vw;
-        margin-bottom: 10vw;
+        margin-top: 12vw;
+        margin-bottom: 12vw;
     }
 
     #episode h2 {
@@ -817,7 +938,7 @@ section>h2{
         font-size: 20px;
         line-height: 60px;
         border-radius: 20px;
-        margin-top: 7vw;
+        margin-top: 12vw;
         margin-bottom: 15vw;
     }
 

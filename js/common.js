@@ -70,5 +70,39 @@ $(function(){
         e.preventDefault();
     });
 });
+$(document).ready(function(){
+    let didScroll;
+    let lastScrollTop = 0;
+    let delta = 5;
+    let navbarHeight = $("header").outerHeight();
+    
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+    
+    setInterval(function(){
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+    
+    function hasScrolled() {
+        let st = $(this).scrollTop();
+    
+        if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+        if(st > lastScrollTop && st > navbarHeight){
+            $("header").removeClass("header_down").addClass("header_up");
+        } else {
+            if(st + $(window).height() < $(document).height()){
+                $("header").removeClass("header_up").addClass("header_down");
+            }
+        }
+        lastScrollTop = st;
+    }
+});
+
 
 

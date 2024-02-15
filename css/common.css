@@ -96,6 +96,11 @@ header {
     z-index: 6;
     opacity: 0.9;
     position: sticky;
+    transition: top 0.2s ease-in-out;
+}
+
+.header_up {
+    top: -120px;
 }
 
 header .small .logo img {

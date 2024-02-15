@@ -15,29 +15,45 @@ $(function () {
     });
 
 });
-$(function () {
-    let pv = document.getElementById("chiikawa_pv");
-    $(".play_btn").click(function(){
-        if(pv.paused==true){
-            pv.play();
-            $(this).hide();
-        } else {
-            pv.pause();
-        }
+
+$(function(){
+    let embed = $(".youtube");
+    $("#vBox").empty();
+
+    $("#tbtn").click(function(){
+        $("#popUp").fadeIn();
+        $("#vBox").append(embed);
     });
-    $(pv).mouseover(function(){
-        $(".video_1>button").stop().fadeIn();
-    });
-    $(pv).mouseout(function(){
-        $(".video_1>button").stop().fadeOut();
+    $(".cbtn").click(function(){
+        $("#popUp").fadeOut();
+        $("#vBox").empty();
     });
 });
 
 $(function(){
-    $(".ep_01").click(function(){
-        $("#popup").fadeIn();
+    let embed = $(".youtube_2");
+    $("#vBox_2").empty();
+
+    $("#tbtn_2").click(function(){
+        $("#popUp_2").fadeIn();
+        $("#vBox_2").append(embed);
     });
-    $("#cbtn").click(function(){
-        $("#popup").fadeOut();
+    $(".cbtn").click(function(){
+        $("#popUp_2").fadeOut();
+        $("#vBox_2").empty();
+    });
+});
+
+$(function(){
+    let embed = $("#vBox_3 video");
+    $("#vBox_3").empty();
+
+    $("#play_btn").click(function(){
+        $("#popUp_3").fadeIn();
+        $("#vBox_3").append(embed);
+    });
+    $(".cbtn").click(function(){
+        $("#popUp_3").fadeOut();
+        $("#vBox_3").empty();
     });
 });

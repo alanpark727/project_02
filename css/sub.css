@@ -139,8 +139,7 @@
 }
 
 #character_list .char_li {
-    width: 19%;
-    height: 48%;
+    width: 20%;
     background-image: url(../img/sub_1_img/chi_bg_yellow.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -174,7 +173,7 @@
 #character_list .active>p {
     color: #fff;
     position: relative;
-    top: -40%;
+    top: -42%;
 }
 
 @keyframes rotateChar {
@@ -374,23 +373,24 @@
     }
 
     .charbox {
-        width: 60%;
+        width: 80%;
     }
 
     .charbox span>img {
-        height: 100%;
+        width: 60%;
     }
 
     #character_list {
         width: 100%;
-    }
-
-    #character_list {
         margin-top: -50px;
     }
 
     #character_list p {
-        font-size: 14px;
+        font-size: 3vw;
+    }
+
+    #character_list .active>p {
+        font-size: 2.5vw;
     }
 
     .epi_list {
