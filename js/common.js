@@ -11,7 +11,7 @@ $(function () {
         if ($('#hamburger').hasClass('is-active')) {
             $('#header_menu').slideToggle();
         } else {
-            $('#header_menu').hide();
+            $('#header_menu').fadeOut();
         }
     });
 });
