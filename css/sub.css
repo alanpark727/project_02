@@ -97,7 +97,6 @@
 
 
 #character_info .charbox span img {
-    height: 100%;
     max-width: 100%;
     padding-bottom: 30px;
 }
@@ -376,8 +375,8 @@
         width: 80%;
     }
 
-    .charbox span>img {
-        width: 60%;
+    #character_info .charbox>span img {
+        max-width: 45%;
     }
 
     #character_list {
@@ -470,6 +469,19 @@
         margin: 0 auto;
     }
 
+    .charbox {
+        width: 80%;
+    }
+
+    #character_info .charbox>span img {
+        max-width: 45%;
+    }
+
+    .text {
+        width: 100%;
+        font-size: 18px;
+    }
+
     #character_list {
         margin-top: -20px;
     }
@@ -529,5 +541,17 @@
     .epi_btn {
         margin-top: 80px;
         margin-bottom: 100px;
+    }
+    #character_info .charbox {
+        width: 600px;
+    }
+
+    #character_info .charbox>span img {
+        max-width: 35%;
+    }
+
+    .text {
+        width: 100%;
+        font-size: 20px;
     }
 }

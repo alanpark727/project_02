@@ -18,35 +18,35 @@ $(function () {
 
 $(function(){
     let embed = $(".youtube");
-    $("#vBox").empty();
+    $(".youtube").empty();
 
     $("#tbtn").click(function(){
         $("#popUp").fadeIn();
         $("#vBox").append(embed);
     });
-    $(".cbtn").click(function(){
-        $("#popUp").fadeOut();
-        $("#vBox").empty();
+    $("#popUp").click(function(){
+        $("#popUp").fadeOut("slow");
+        $(".youtube").empty();
     });
 });
 
 $(function(){
     let embed = $(".youtube_2");
-    $("#vBox_2").empty();
+    $(".youtube_2").empty();
 
     $("#tbtn_2").click(function(){
         $("#popUp_2").fadeIn();
         $("#vBox_2").append(embed);
     });
-    $(".cbtn").click(function(){
-        $("#popUp_2").fadeOut();
-        $("#vBox_2").empty();
+    $("#popUp_2").click(function(){
+        $("#popUp_2").fadeOut("slow");
+        $(".youtube_2").empty();
     });
 });
 
 $(function(){
     let embed = $("#vBox_3 video");
-    $("#vBox_3").empty();
+    $(".pv").empty();
 
     $("#play_btn").click(function(){
         $("#popUp_3").fadeIn();
@@ -54,6 +54,6 @@ $(function(){
     });
     $(".cbtn").click(function(){
         $("#popUp_3").fadeOut();
-        $("#vBox_3").empty();
+        $(".pv").get(0).pause();
     });
 });

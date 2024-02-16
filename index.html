@@ -104,21 +104,21 @@
             <h5>NEWS</h5>
             <div class="artbox">
                 <article id="art_01">
-                    <img src="img/news_01.jpg" alt="art_01">
+                    <img src="img/news_01.jpg" alt="news_01">
                     <h4>라인 스탬프 제 2탄 무료배포!
                         <br>2023.11.21~2024.2.12
                     </h4>
                 </article>
                 <article id="art_02">
-                    <img src="img/news_02.jpg" alt="art_02">
+                    <img src="img/news_02.jpg" alt="news_02">
                     <h4>WEB샵. 치이카와 마켓</h4>
                 </article>
                 <article id="art_03">
-                    <img src="img/news_04.jpg" alt="art_03">
+                    <img src="img/news_04.jpg" alt="news_03">
                     <h4>치이카와랜드(영업점) 오픈소식</h4>
                 </article>
                 <article id="art_04">
-                    <img src="img/news_06.jpg" alt="art_04">
+                    <img src="img/news_06.jpg" alt="news_04">
                     <h4>치이카와 카페, 전국에 기간한정 카페 오픈</h4>
                 </article>
             </div>
@@ -130,14 +130,14 @@
         </div>
         <div id="char_info">
             <ul class="char_li">
-                <li><img src="img/chara_chi.png" alt="">
+                <li><img src="img/chara_chi.png" alt="치이카와">
                     <p>치이카와</p>
                 </li>
                 <li>
-                    <img src="img/chara_hachi.png" alt="">
+                    <img src="img/chara_hachi.png" alt="하치와레">
                     <p>하치와레</p>
                 </li>
-                <li><img src="img/chara_usagi.png" alt="">
+                <li><img src="img/chara_usagi.png" alt="우사기">
                     <p>우사기</p>
                 </li>
             </ul>
@@ -150,38 +150,42 @@
         <div id="video">
             <div class="video_wrap">
                 <div class="video_1 vFrame">
-                    <img src="img/eye_catch.gif" alt="">
-                    <button id="play_btn"></button>
+                    <div class="btnwrap">
+                        <img src="img/eye_catch.gif" alt="먼작귀PV">
+                        <button id="play_btn" class="fa-solid fa-play"></button>
+                    </div>
                     <p class="title"><br>「먼작귀」 PV</p>
                     <div id="popUp_3">
-                        <button class="fa-solid fa-x cbtn"></button>
                         <div id="vBox_3">
-                            <video src="video/chiikawa_pv.mp4" class="pv" controls autoplay width="100%"
-                                height="100%"></video>
+                            <video src="video/chiikawa_pv.mp4" class="pv" controls autoplay="allowed" width="100%" height="100%"></video>
+                            <button class="fa-solid fa-x cbtn"></button>
                         </div>
                     </div>
                 </div>
                 <div class="video_2 vFrame">
-                    <img src="img/001.jpg" alt="">
-                    <button id="tbtn" class="fa-solid fa-play"></button>
-                    <p class="title"><sub>【전편공개】</sub> <br>「먼작귀」 1화 단단한 푸딩, 핫케이크</p>
+                    <div class="btnwrap">
+                        <img src="img/001.jpg" alt="전편공개_EP01">
+                        <button id="tbtn" class="fa-solid fa-play"></button>
+                    </div>
+                    <p class="title"><sub>【전편공개】</sub><br>「먼작귀」 1화 단단한 푸딩, 핫케이크</p>
                     <div id="popUp">
-                        <button class="fa-solid fa-x cbtn"></button>
                         <div id="vBox">
                             <iframe width="100%" height="100%"
                                 src="https://www.youtube.com/embed/kzAfNg6pAvI?list=PLsmaUhkCwW3q5q46uc9So2b4D-pZqVZOV"
                                 class="youtube" title="[전편공개]먼작귀(먼가 작고 귀여운 녀석) 1화_단단한 푸딩, 핫케이크" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
+
                     </div>
                 </div>
                 <div class="video_3 vFrame">
-                    <img src="img/011.jpg" alt="">
-                    <button id="tbtn_2" class="fa-solid fa-play"></button>
+                    <div class="btnwrap">
+                        <img src="img/011.jpg" alt="쇼츠_EP01">
+                        <button id="tbtn_2" class="fa-solid fa-play"></button>
+                    </div>
                     <p class="title"><sub>【Shorts】</sub> <br>「먼작귀」 1화 단단한 푸딩, 핫케이크</p>
                     <div id="popUp_2">
-                        <button class="fa-solid fa-x cbtn"></button>
                         <div id="vBox_2">
                             <iframe width="100%" height="100%" class="youtube_2"
                                 src="https://www.youtube.com/embed/XOFewWJQ_34?list=PLsmaUhkCwW3q2CHL1QXMcelAYZ_EKuX8X"
@@ -228,7 +232,7 @@
                 </article>
             </div>
         </div>
-        <img src="img/ha.png" alt="" class="chc_ani hat_1">
+        <img src="img/ha.png" alt="hachi_animation" class="chc_ani hat_1">
         <img src="img/cave.png" alt="cave" class="cave_1">
         <a href="sub_2.html" id="morebtn">더 많은 상품보기</a>
         <div id="bd_wrap">

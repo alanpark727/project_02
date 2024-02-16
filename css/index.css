@@ -255,7 +255,10 @@ section>h2{
     width: 30%;
     order: 2;
     position: relative;
-    top: -20px;
+}
+
+#video .pv {
+    z-index: 6;
 }
 
 .video_1 img {
@@ -295,18 +298,21 @@ section>h2{
     width: 100%;
 }
 
+.btnwrap {
+    position: relative;
+}
+
 #play_btn {
     position: absolute;
     left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 50px;
     height: 50px;
+    font-size: 30px;
+    text-align: center;
     cursor: pointer;
     border-radius: 50%;
-    background-image: url(../img/play_pause.png);
-    background-position: center;
-    background-size: cover;
     opacity: 0.9;
     border: none;
 }
@@ -326,8 +332,8 @@ section>h2{
 #tbtn {
     position: absolute;
     left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -341,8 +347,8 @@ section>h2{
 #tbtn_2 {
     position: absolute;
     left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -362,7 +368,7 @@ section>h2{
     top: 0;
     left: 0;
     display: none;
-    z-index: 10;
+    z-index: 5;
 }
 
 #vBox {
@@ -382,7 +388,7 @@ section>h2{
     top: 0;
     left: 0;
     display: none;
-    z-index: 10;
+    z-index: 5;
 }
 
 #vBox_2 {
@@ -398,8 +404,8 @@ section>h2{
     width: 45px;
     height: 45px;
     border: none;
-    top: 20%;
-    left: 70%;
+    top: -50px;
+    right: 0;
     position: absolute;
     border-radius: 50%;
     cursor: pointer;
@@ -414,7 +420,7 @@ section>h2{
     top: 0;
     left: 0;
     display: none;
-    z-index: 10;
+    z-index: 5;
 }
 
 #vBox_3 {
@@ -800,7 +806,6 @@ section>h2{
         flex-flow: column wrap;
         justify-content: space-evenly;
         align-content: space-around;
-        padding-bottom: 30px;
     }
 
     #video .video_wrap>div {
@@ -811,7 +816,33 @@ section>h2{
     #video .video_1 {
         order: 1;
         height: auto;
-        margin-bottom: -40px;
+    }
+
+    #video .title {
+        font-size: 4vw;
+    }
+
+    #vBox {
+        width: 76vw;
+        height: 42.25vw;
+    }
+    #vBox_2 {
+        width: 76vw;
+        height: 42.25vw;
+    }
+    #vBox_3 {
+        width: 76vw;
+        height: 42.25vw;
+    }
+
+    .cbtn {
+        width: 30px;
+        height: 30px;
+        top: 2px;
+        right: 12px;
+        font-size: 16px;
+        opacity: 0.7;
+        z-index: 7;
     }
 
     #goods {
@@ -974,7 +1005,33 @@ section>h2{
     #video .video_1 {
         order: 1;
         height: auto;
-        margin-bottom: -40px;
+    }
+
+    #video .title {
+        font-size: 4vw;
+    }
+
+    .cbtn {
+        width: 30px;
+        height: 30px;
+        top: 5px;
+        right: 10px;
+        font-size: 16px;
+        opacity: 0.7;
+        z-index: 7;
+    }
+
+    #vBox {
+        width: 80vw;
+        height: 45vw;
+    }
+    #vBox_2 {
+        width: 80vw;
+        height: 45vw;
+    }
+    #vBox_3 {
+        width: 80vw;
+        height: 45vw;
     }
 
     #goods {
@@ -1183,6 +1240,23 @@ section>h2{
         order: 2;
     }
 
+    #video .title {
+        font-size: 2vw;
+    }
+
+    #vBox {
+        width: 880px;
+        height: 495px;
+    }
+    #vBox_2 {
+        width: 880px;
+        height: 495px;
+    }
+    #vBox_3 {
+        width: 880px;
+        height: 495px;
+    }
+
     #goods>h5 {
         margin-bottom: 50px;
     }
@@ -1231,6 +1305,10 @@ section>h2{
         width: 1200px;
         height: 400px;
         margin: 0 auto;
+    }
+
+    #video .title {
+        font-size: 24px;
     }
 
     #goods {
