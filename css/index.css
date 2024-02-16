@@ -258,7 +258,21 @@ section>h2{
 }
 
 #video .pv {
+    width: 100%;
+    height: 100%;
     z-index: 6;
+}
+
+.youtube {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.youtube_2 {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .video_1 img {
